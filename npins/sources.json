@@ -1,0 +1,109 @@
+{
+  "pins": {
+    "blocklist": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "StevenBlack",
+        "repo": "hosts"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "6897cff7b21b609800ddd61abe109587079a4ca1",
+      "url": "https://github.com/StevenBlack/hosts/archive/6897cff7b21b609800ddd61abe109587079a4ca1.tar.gz",
+      "hash": "sha256-NEBWlyBQllOI5L2dneXFxHYKM7kB7uofyJIIzGYRdVI="
+    },
+    "catfuzzel": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "catppuccin",
+        "repo": "fuzzel"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "0af0e26901b60ada4b20522df739f032797b07c3",
+      "url": "https://github.com/catppuccin/fuzzel/archive/0af0e26901b60ada4b20522df739f032797b07c3.tar.gz",
+      "hash": "sha256-XpItMGsYq4XvLT+7OJ9YRILfd/9RG1GMuO6J4hSGepg="
+    },
+    "micro-bounce": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "sparques",
+        "repo": "micro-bounce"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "de7a96dc6b6ffa7832b4923a65b02b67735dbd9c",
+      "url": "https://github.com/sparques/micro-bounce/archive/de7a96dc6b6ffa7832b4923a65b02b67735dbd9c.tar.gz",
+      "hash": "sha256-gjj0L/DL+i6hU4GcgduXrXwiWPM1LYvzcaaEBaA6U2c="
+    },
+    "micro-plugin-lsp": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "AndCake",
+        "repo": "micro-plugin-lsp"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "a3ed3a73b2f7576b1e2dc1ac3c98dfe695e6d05d",
+      "url": "https://github.com/AndCake/micro-plugin-lsp/archive/a3ed3a73b2f7576b1e2dc1ac3c98dfe695e6d05d.tar.gz",
+      "hash": "sha256-0an688Bc+ZtJ4JHqMfD8UAsCoKgQs6A+DRgfr1QpYG0="
+    },
+    "micro-quoter": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "sparques",
+        "repo": "micro-quoter"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "31a8bc6b04755546d47984e6e1ab3dd5e6f0f24c",
+      "url": "https://github.com/sparques/micro-quoter/archive/31a8bc6b04755546d47984e6e1ab3dd5e6f0f24c.tar.gz",
+      "hash": "sha256-BX0Vj1ZVP7FlcG/4D7x1V0MmZ/IYNEmIcpcqubZLabQ="
+    },
+    "rosebtop": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "rose-pine",
+        "repo": "btop"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "c27e5d48e44e8bd115a2838ecf8cf1f3ea39475e",
+      "url": "https://github.com/rose-pine/btop/archive/c27e5d48e44e8bd115a2838ecf8cf1f3ea39475e.tar.gz",
+      "hash": "sha256-vtqqMEQbPOSRfQ28RIln5zZ4cZlyB3sMc2NaLUcITWo="
+    },
+    "rosefish": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "rose-pine",
+        "repo": "fish"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "0749331afd4be6bc8035a812a20e489efe1d616f",
+      "url": "https://github.com/rose-pine/fish/archive/0749331afd4be6bc8035a812a20e489efe1d616f.tar.gz",
+      "hash": "sha256-hOcsGt0IMoX1a02t85qeoE381XEca0F2x0AtFNwOqj0="
+    },
+    "rosefoot": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "rose-pine",
+        "repo": "foot"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "b35cec816fbfb8d319123694c080f7025cf10798",
+      "url": "https://github.com/rose-pine/foot/archive/b35cec816fbfb8d319123694c080f7025cf10798.tar.gz",
+      "hash": "sha256-IecTpIM1vygExSyVG5486mZ7SWkdw6VdhtI7QrfKvJs="
+    }
+  },
+  "version": 7
+}
