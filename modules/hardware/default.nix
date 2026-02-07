@@ -2,6 +2,7 @@
   lib,
   config,
   modulesPath,
+  pkgs,
   ...
 }:
 {
@@ -23,5 +24,8 @@
 
     # Define host platform
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+    environment.systemPackages = [
+      pkgs.egl-wayland
+    ];
   };
 }

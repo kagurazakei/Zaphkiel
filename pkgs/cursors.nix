@@ -1,14 +1,14 @@
 { stdenv, fetchFromGitHub }:
 stdenv.mkDerivation {
-  name = "cursors";
+  name = "kureiji-ollie-cursor";
   src = fetchFromGitHub {
     repo = "kureiji-ollie-cursors";
     owner = "kagurazakei";
-    rev = "1hrn5zihlyvg3ydk9zgmxrpj4czhnmhkxi9wwhfkgini42kjh8nv";
-    hash = "sha256-ts43WiDBT5xG9TSdocvBx150oboEZhqtSI13Exr8CWQ=";
+    rev = "a68837f6fb2bf30efb12b62f395e9897384cb9db";
+    hash = "sha256-LzXB+FwaIsaO76Iv+rcnrNx4YiUpSzLxJvuKU83MMGA=";
   };
   installPhase = ''
     mkdir -p $out/share/icons
-    cp -r cursors/Kureiji-Ollie-v2 $out/share/icons/ 
+    cp -r Kureiji-Ollie-v2 $out/share/icons/ 
   '';
 }

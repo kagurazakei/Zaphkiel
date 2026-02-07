@@ -113,7 +113,7 @@
               "privacy.window.maxInnerWidth" = 1600;
               "privacy.window.maxInnerHeight" = 900;
               "privacy.resistFingerprinting.letterboxing" = false;
-              "browser.toolbars.bookmarks.visibility" = "always";
+              "browser.toolbars.bookmarks.visibility" = "never";
               "privacy.globalprivacycontrol.enabled" = true;
               "privacy.globalprivacycontrol.pbmode.enabled" = true;
               "privacy.globalprivacycontrol.functionality.enabled" = true;

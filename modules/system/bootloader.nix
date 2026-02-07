@@ -12,7 +12,6 @@
   config =
     lib.mkIf (config.kagurazakei.system.bootloader.enable && config.kagurazakei.system.enable)
       {
-        environment.systemPackages = [ pkgs.sbctl ];
         boot = {
           consoleLogLevel = 0;
           loader.efi = {

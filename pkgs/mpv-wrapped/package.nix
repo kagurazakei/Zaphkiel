@@ -36,8 +36,7 @@ symlinkJoin {
 
   postBuild = ''
     wrapProgram $out/bin/mpv \
-    export __NV_PRIME_RENDER_OFFLOAD=0  \
-    --add-flags '--config-dir=${mpvconf}' \
+    --add-flags '--config-dir=${mpvconf}' 
   '';
 
   meta.description = "A wrapped mpv package with support for anime 4k shadders";

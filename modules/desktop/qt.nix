@@ -20,8 +20,10 @@ in
     wlsunset
     libqalculate
     quickshell
-    papirus-icon-theme
-    catppuccin-papirus-folders
+    (catppuccin-papirus-folders.override {
+      flavor = "mocha";
+      accent = "pink";
+    })
   ];
   hjem.users.${username}.packages = with pkgs; [
     nur.repos.ilya-fedin.qt6ct

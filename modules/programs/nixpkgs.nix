@@ -52,13 +52,10 @@
         # xournalpp # note taking
         inputs.firefox.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-        (catppuccin-kde.override {
-          flavour = [ "mocha" ];
-          accents = [ "pink" ];
-        })
+        catppuccin-kde
         tmux
         zellij
-        mpv # media player
+        # mpv # media player
         gparted # disk management software
         gnome-calculator # calculator
         moonlight-qt # Remote to Windows GPU-Passthru
@@ -71,10 +68,9 @@
         ddcutil # Manipulating external monitors using i2c bus
         zpkgs.scripts.npins-show # npins-show command
         # wo.nahidacursor # Cursor Package
-        # wo.papiteal # Papirus Teal Icons
-        # wo.vesktop # Vesktop with overrides
-        # kdePackages.dolphin
-        # wo.favCursor
+        wo.mpv-wrapped
+        wo.cursors
+        wo.catMocha-icons
         sources.kureiji-ollie-cursors
         zathura
         gtk-engine-murrine

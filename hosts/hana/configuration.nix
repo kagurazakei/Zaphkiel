@@ -75,7 +75,10 @@
 
   # Prioritize Fingerprint
   # programs.kurukuruDM.settings.instantAuth = lib.mkForce true;
-
+  services.xserver.videoDrivers = [
+    "modesetting"
+    "nvidia"
+  ];
   /*
     This value determines the NixOS release from which the default
     settings for stateful data, like file locations and database versions

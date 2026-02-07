@@ -15,7 +15,9 @@ lib.fix (
       accent = "pink";
       flavor = "mocha";
     };
+    cursors = callPackage ./cursors.nix { };
     qt6ct = callPackage ./qt6ct { };
     mpv-wrapped = callPackage ./mpv-wrapped/package.nix { };
+    catMocha-icons = callPackage ./papirus-catppuccin.nix { };
   }
 )
