@@ -5,6 +5,7 @@
   pkgs,
   lib,
   users,
+  sources,
   ...
 }:
 {
@@ -47,8 +48,16 @@
       environment.systemPackages = with pkgs; [
 
         qimgv # image viewer
-        wineWowPackages.waylandFull # wine
-        xournalpp # note taking
+        # wineWowPackages.waylandFull # wine
+        # xournalpp # note taking
+        inputs.firefox.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin
+        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+        (catppuccin-kde.override {
+          flavour = [ "mocha" ];
+          accents = [ "pink" ];
+        })
+        tmux
+        zellij
         mpv # media player
         gparted # disk management software
         gnome-calculator # calculator
@@ -61,10 +70,12 @@
         wlsunset # I need fucking blue light filter, my fucking eyes hurt
         ddcutil # Manipulating external monitors using i2c bus
         zpkgs.scripts.npins-show # npins-show command
-        wo.nahidacursor # Cursor Package
-        wo.papiteal # Papirus Teal Icons
-        wo.vesktop # Vesktop with overrides
-        kdePackages.dolphin
+        # wo.nahidacursor # Cursor Package
+        # wo.papiteal # Papirus Teal Icons
+        # wo.vesktop # Vesktop with overrides
+        # kdePackages.dolphin
+        # wo.favCursor
+        sources.kureiji-ollie-cursors
         zathura
         gtk-engine-murrine
         pavucontrol
@@ -88,7 +99,6 @@
         dbus-glib
         gtkmm4
         nwg-look
-        viu
         # Noctalia Shell
         inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];

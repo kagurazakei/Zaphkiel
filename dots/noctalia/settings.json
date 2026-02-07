@@ -1,15 +1,12 @@
 {
     "appLauncher": {
         "autoPasteClipboard": false,
-        "clipboardWatchImageCommand": "wl-paste --type image --watch cliphist store",
-        "clipboardWatchTextCommand": "wl-paste --type text --watch cliphist store",
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
         "enableClipboardHistory": true,
         "enableSettingsSearch": true,
-        "enableWindowsSearch": true,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
         "pinnedApps": [
@@ -34,13 +31,11 @@
         "volumeStep": 5
     },
     "bar": {
-        "autoHideDelay": 500,
-        "autoShowDelay": 150,
         "backgroundOpacity": 0.9,
         "barType": "framed",
         "capsuleOpacity": 0.89,
-        "density": "default",
-        "displayMode": "always_visible",
+        "density": "spacious",
+        "exclusive": true,
         "floating": false,
         "frameRadius": 12,
         "frameThickness": 17,
@@ -50,7 +45,7 @@
         "monitors": [
         ],
         "outerCorners": true,
-        "position": "left",
+        "position": "top",
         "screenOverrides": [
         ],
         "showCapsule": true,
@@ -129,9 +124,13 @@
             ],
             "left": [
                 {
-                    "icon": "rocket",
-                    "id": "Launcher",
-                    "usePrimaryColor": true
+                    "colorizeDistroLogo": false,
+                    "colorizeSystemIcon": "secondary",
+                    "customIconPath": "",
+                    "enableColorization": true,
+                    "icon": "snowflake-off",
+                    "id": "ControlCenter",
+                    "useDistroLogo": false
                 },
                 {
                     "characterCount": 2,
@@ -146,8 +145,6 @@
                     "id": "Workspace",
                     "labelMode": "index",
                     "occupiedColor": "secondary",
-                    "pillSize": 0.6,
-                    "reverseScroll": false,
                     "showApplications": false,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
@@ -155,17 +152,42 @@
                 },
                 {
                     "id": "WallpaperSelector"
+                },
+                {
+                    "deviceNativePath": "",
+                    "displayMode": "onhover",
+                    "hideIfIdle": false,
+                    "hideIfNotDetected": true,
+                    "id": "Battery",
+                    "showNoctaliaPerformance": false,
+                    "showPowerProfiles": false,
+                    "warningThreshold": 30
+                },
+                {
+                    "id": "KeepAwake"
+                },
+                {
+                    "colorizeIcons": false,
+                    "hideMode": "visible",
+                    "id": "ActiveWindow",
+                    "maxWidth": 145,
+                    "scrollingMode": "hover",
+                    "showIcon": true,
+                    "useFixedWidth": true
                 }
             ],
             "right": [
                 {
+                    "id": "WallpaperSelector"
+                },
+                {
                     "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatHorizontal": "HH:mm ddd, MMM dds",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false,
-                    "usePrimaryColor": false
+                    "usePrimaryColor": true
                 },
                 {
                     "blacklist": [
@@ -181,8 +203,7 @@
                     "hideWhenZero": false,
                     "hideWhenZeroUnread": false,
                     "id": "NotificationHistory",
-                    "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
+                    "showUnreadBadge": true
                 },
                 {
                     "displayMode": "onhover",
@@ -191,52 +212,16 @@
                 },
                 {
                     "defaultSettings": {
-                        "autoHeight": true,
-                        "cheatsheetData": [
-                        ],
-                        "columnCount": 3,
-                        "detectedCompositor": "",
-                        "hyprlandConfigPath": "~/.config/hypr/hyprland.conf",
-                        "modKeyVariable": "$mod",
-                        "niriConfigPath": "~/.config/niri/config.kdl",
-                        "windowHeight": 0,
-                        "windowWidth": 1400
-                    },
-                    "id": "plugin:keybind-cheatsheet"
-                },
-                {
-                    "defaultSettings": {
                         "position": "Bottom"
                     },
                     "id": "plugin:clipper"
                 },
                 {
-                    "defaultSettings": {
-                        "completedCount": 0,
-                        "count": 0,
-                        "current_page_id": 0,
-                        "isExpanded": false,
-                        "pages": [
-                            {
-                                "id": 0,
-                                "name": "General"
-                            }
-                        ],
-                        "showBackground": true,
-                        "showCompleted": true,
-                        "todos": [
-                        ]
-                    },
-                    "id": "plugin:todo"
+                    "id": "PowerProfile"
                 },
                 {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "error",
-                    "customIconPath": "",
-                    "enableColorization": true,
-                    "icon": "snowflake",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
+                    "colorName": "error",
+                    "id": "SessionMenu"
                 }
             ]
         }
@@ -358,7 +343,6 @@
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
-        "allowPasswordWithFprintd": false,
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
@@ -369,12 +353,12 @@
         "enableLockScreenCountdown": true,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
-        "iRadiusRatio": 0.38,
+        "iRadiusRatio": 0.45,
         "language": "",
         "lockOnSuspend": true,
         "lockScreenCountdownDuration": 10000,
-        "radiusRatio": 0.28,
-        "scaleRatio": 1,
+        "radiusRatio": 0.4,
+        "scaleRatio": 1.1,
         "screenRadiusRatio": 0.86,
         "shadowDirection": "bottom_right",
         "shadowOffsetX": 2,
@@ -421,7 +405,7 @@
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
-        "enabled": true,
+        "enabled": false,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
@@ -429,8 +413,6 @@
     },
     "notifications": {
         "backgroundOpacity": 1,
-        "batteryCriticalThreshold": 5,
-        "batteryWarningThreshold": 20,
         "criticalUrgencyDuration": 15,
         "enableKeyboardLayoutToast": true,
         "enableMediaToast": false,
@@ -455,7 +437,7 @@
             "lowSoundFile": "",
             "normalSoundFile": "",
             "separateSounds": false,
-            "volume": 0.3
+            "volume": 0.41000000000000003
         }
     },
     "osd": {
@@ -519,14 +501,12 @@
         "showHeader": true,
         "showNumberLabels": true
     },
-    "settingsVersion": 47,
+    "settingsVersion": 45,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
         "cpuPollingInterval": 1000,
         "cpuWarningThreshold": 80,
         "criticalColor": "#ee5396",
-        "diskAvailCriticalThreshold": 10,
-        "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
         "diskPollingInterval": 30000,
         "diskWarningThreshold": 80,
@@ -543,6 +523,7 @@
         "swapCriticalThreshold": 90,
         "swapWarningThreshold": 80,
         "tempCriticalThreshold": 90,
+        "tempPollingInterval": 3000,
         "tempWarningThreshold": 80,
         "useCustomColors": true,
         "warningColor": "#be95ff"
@@ -585,9 +566,9 @@
         "bluetoothHideUnnamedDevices": false,
         "boxBorderEnabled": false,
         "fontDefault": "JetBrainsMono Nerd Font",
-        "fontDefaultScale": 1,
-        "fontFixed": "monospace",
-        "fontFixedScale": 1,
+        "fontDefaultScale": 1.07,
+        "fontFixed": "JetBrainsMono Nerd Font Propo",
+        "fontFixedScale": 1.09,
         "networkPanelView": "wifi",
         "panelBackgroundOpacity": 0.88,
         "panelsAttachedToBar": true,
@@ -596,7 +577,7 @@
         "wifiDetailsViewMode": "grid"
     },
     "wallpaper": {
-        "automationEnabled": true,
+        "automationEnabled": false,
         "directory": "/home/antonio/Pictures/wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
@@ -611,7 +592,6 @@
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
         "solidColor": "#1a1a2e",
-        "sortOrder": "date_asc",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": "random",

@@ -9,6 +9,7 @@
     ./amdgpu.nix
     ./audio.nix
     ./intelgpu.nix
+    ./nvidia.nix
     ./power.nix
 
     # Scans undetected hardware

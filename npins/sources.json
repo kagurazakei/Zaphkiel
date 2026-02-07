@@ -1,5 +1,18 @@
 {
   "pins": {
+    "SilentSDDM": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "kagurazakei",
+        "repo": "SilentSDDM"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "c56db2f57b0216c8b18dc49f0aa8f18d49f0fb4f",
+      "url": "https://github.com/kagurazakei/SilentSDDM/archive/c56db2f57b0216c8b18dc49f0aa8f18d49f0fb4f.tar.gz",
+      "hash": "sha256-AEUnL9uFqFzhD9MAFtXMxUeFoIaspnXqwqAKmXD9JQg="
+    },
     "blocklist": {
       "type": "Git",
       "repository": {
@@ -9,9 +22,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "6897cff7b21b609800ddd61abe109587079a4ca1",
-      "url": "https://github.com/StevenBlack/hosts/archive/6897cff7b21b609800ddd61abe109587079a4ca1.tar.gz",
-      "hash": "sha256-NEBWlyBQllOI5L2dneXFxHYKM7kB7uofyJIIzGYRdVI="
+      "revision": "7ea67ed353b27e1dbe36363074d1b6c3ca6be46b",
+      "url": "https://github.com/StevenBlack/hosts/archive/7ea67ed353b27e1dbe36363074d1b6c3ca6be46b.tar.gz",
+      "hash": "sha256-DT9HK9iYTmXUfjKcTxLRMZOeCLb9CAoFEpBiDpEku3g="
     },
     "catfuzzel": {
       "type": "Git",
@@ -25,6 +38,19 @@
       "revision": "0af0e26901b60ada4b20522df739f032797b07c3",
       "url": "https://github.com/catppuccin/fuzzel/archive/0af0e26901b60ada4b20522df739f032797b07c3.tar.gz",
       "hash": "sha256-XpItMGsYq4XvLT+7OJ9YRILfd/9RG1GMuO6J4hSGepg="
+    },
+    "kureiji-ollie-cursors": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "kagurazakei",
+        "repo": "kureiji-ollie-cursors"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "a68837f6fb2bf30efb12b62f395e9897384cb9db",
+      "url": "https://github.com/kagurazakei/kureiji-ollie-cursors/archive/a68837f6fb2bf30efb12b62f395e9897384cb9db.tar.gz",
+      "hash": "sha256-LzXB+FwaIsaO76Iv+rcnrNx4YiUpSzLxJvuKU83MMGA="
     },
     "micro-bounce": {
       "type": "Git",
@@ -87,9 +113,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "0749331afd4be6bc8035a812a20e489efe1d616f",
-      "url": "https://github.com/rose-pine/fish/archive/0749331afd4be6bc8035a812a20e489efe1d616f.tar.gz",
-      "hash": "sha256-hOcsGt0IMoX1a02t85qeoE381XEca0F2x0AtFNwOqj0="
+      "revision": "6cfc508e81b231e955690dc9723c631374f468eb",
+      "url": "https://github.com/rose-pine/fish/archive/6cfc508e81b231e955690dc9723c631374f468eb.tar.gz",
+      "hash": "sha256-NgfZnaik5OAur53y3WA0Hqu6f332aVdhhMWnEtDxmNs="
     },
     "rosefoot": {
       "type": "Git",

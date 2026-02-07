@@ -40,11 +40,7 @@ let
 
   hosts = [
     "hana"
-    "greenery"
-    "graphite"
-    "kaolin"
-    "quartz"
-    "verdure"
+    "desktop"
   ];
 in
 genAttrs hosts mkHost

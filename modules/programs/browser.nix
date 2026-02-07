@@ -362,9 +362,5 @@
         # Firefox -> Librewolf
         environment.etc."firefox/policies/policies.json".target = "librewolf/policies/policies.json";
 
-        # Brave browser (might remove)
-        environment.systemPackages = with pkgs; [
-          brave
-        ];
       };
 }

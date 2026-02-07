@@ -2,16 +2,25 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }:
 {
-
+  imports = [ inputs.chaotic.nixosModules.default ];
   options.kagurazakei.hardware.nvidia.enable = lib.mkEnableOption "nvidia graphics";
 
   config =
     lib.mkIf (config.kagurazakei.hardware.nvidia.enable && config.kagurazakei.hardware.enable)
       {
-
+        chaotic.nyx.overlay.enable = true;
+        environment.systemPackages = with pkgs; [
+          vulkanPackages_latest.vulkan-loader
+          vulkanPackages_latest.vulkan-tools
+          libva-utils
+          tmux
+          bottom
+          htop
+        ];
         boot = {
           kernelModules = [
             "nvidia"
@@ -37,9 +46,9 @@
             vdpauinfo
             libva
             libva-utils
+            mesa
           ];
         };
-
         hardware.nvidia = {
           modesetting.enable = true;
           powerManagement.enable = false;
@@ -48,6 +57,12 @@
           open = false;
           nvidiaSettings = true;
           package = config.boot.kernelPackages.nvidiaPackages.stable;
+          prime = {
+            offload = {
+              enable = true;
+              enableOffloadCmd = true;
+            };
+          };
         };
       };
 }

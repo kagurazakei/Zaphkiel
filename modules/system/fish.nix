@@ -4,12 +4,13 @@
   config,
   users,
   sources,
+  user,
   ...
 }:
 
 let
   rebuildCommand = "nixos-rebuild --flake ~/nixos# -S";
-
+  dot = config.hjem.users.${user}.impure.dotsDir;
 in
 {
 
@@ -62,52 +63,35 @@ in
         gl = "git log";
 
         # misc
-        v = "nvim";
-        sv = "sudo -E nvim";
+
       };
 
       # Aliases to execute commands directly
       shellAliases = {
         ls = "eza --icons --group-directories-first -1";
+
+        v = "nvim";
+        sv = "sudo -E nvim";
+        ga = "git add .";
+        fm = "yazi";
         snowball = "${rebuildCommand} boot";
         snowfall = "${rebuildCommand} switch";
         snowstorm = "${rebuildCommand} test";
         snowshed = "${rebuildCommand} dry-build";
-        schizo = "ssh antonio@kagurazakei";
+        schizo = "ssh antonio@hana";
         libre = "ssh sumee@kaolin";
         deployin = "${rebuildCommand} --use-substitutes --target-host sumee@kaolin boot";
         deployer = "${rebuildCommand} --build-host sumee@verdure --target-host sumee@verdure boot";
       };
 
       # Coloring shell, referenced from Zaphkiel config
-      interactiveShellInit =
-        let
-          rosepine-fzf = [
-            "fg:#908caa"
-            "bg:-1"
-            "hl:#ebbcba"
-            "fg+:#e0def4"
-            "bg+:#26233a"
-            "hl+:#ebbcba"
-            "border:#403d52"
-            "header:#31748f"
-            "gutter:#191724"
-            "spinner:#f6c177"
-            "info:#9ccfd8"
-            "pointer:#c4a7e7"
-            "marker:#eb6f92"
-            "prompt:#908caa"
-          ];
-          fzf-options = builtins.concatStringsSep " " (
-            builtins.map (option: "--color=" + option) rosepine-fzf
-          );
-        in
-        ''
-          set sponge_purge_only_on_exit true
+      interactiveShellInit = ''
+
+        ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
+        ${pkgs.nix-your-shell}/bin/nix-your-shell fish | source
+        set sponge_purge_only_on_exit true
           set fish_greeting
           set fish_cursor_insert line blink
-          set -Ux LS_COLORS $(cat ${../../dots/fish/rosepinelscolors})
-          set -Ux FZF_DEFAULT_OPTS ${fzf-options}
 
           function fish_user_key_bindings
             bind --mode insert alt-c 'cdi; commandline -f repaint'
@@ -135,7 +119,7 @@ in
               echo (path dirname $package_path | path dirname)
             end
           end
-        '';
+      '';
     };
 
     # Zoxide, faster change directory
@@ -147,7 +131,7 @@ in
 
     # Fish integration
     programs.direnv.enableFishIntegration = true;
-
+    programs.starship.enable = true;
     # CNF
     programs.command-not-found.enable = false;
 
@@ -159,20 +143,18 @@ in
       fishPlugins.done
       fishPlugins.sponge
       fishPlugins.hydro
+      carapace
+      starship
       eza
+      krabby
+      atuin
+      nix-your-shell
+      any-nix-shell
       fish-lsp
       babelfish
       g-ls
       stylua
       dwt1-shell-color-scripts
     ];
-
-    # Hjem fish dotfiles
-    hjem.users = lib.genAttrs users (user: {
-      files = {
-        ".config/fish/config.fish".source = ../../dots/fish/config.fish;
-        ".config/fish/themes".source = sources.rosefish + "/themes";
-      };
-    });
   };
 }

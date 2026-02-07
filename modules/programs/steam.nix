@@ -7,15 +7,15 @@
 }:
 {
 
+  imports = [
+    inputs.nix-gaming.nixosModules.wine
+    inputs.nix-gaming.nixosModules.pipewireLowLatency
+    inputs.nix-gaming.nixosModules.platformOptimizations
+  ];
   options.kagurazakei.programs.steam.enable = lib.mkEnableOption "steam";
 
   config = lib.mkIf (config.kagurazakei.programs.steam.enable && config.kagurazakei.programs.enable) {
 
-    imports = [
-      inputs.nix-gaming.nixosModules.wine
-      inputs.nix-gaming.nixosModules.pipewireLowLatency
-      inputs.nix-gaming.nixosModules.platformOptimizations
-    ];
     programs.wine = {
       enable = true;
       package = inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-cachyos;

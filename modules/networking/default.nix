@@ -5,7 +5,7 @@
 }:
 {
   imports = [
-    # ./bluetooth.nix
+    ./bluetooth.nix
     # ./dnscrypt.nix
     # ./fail2ban.nix
     ./openssh.nix

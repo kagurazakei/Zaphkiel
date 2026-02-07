@@ -8,14 +8,13 @@
 {
   imports = [
     # Import files
-    ./greetd.nix
+    # ./greetd.nix
     ./hypridle.nix
     ./hyprland.nix
     ./hyprlock.nix
-    ./kurukurudm.nix
+    # ./kurukurudm.nix
     ./niri.nix
-    # ./sddm.nix
-    ./qt.nix
+    ./sddm.nix
     ./xserver.nix
   ];
 

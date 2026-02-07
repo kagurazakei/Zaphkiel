@@ -25,7 +25,7 @@
   };
 
   boot = {
-    kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-zen4;
+    kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto;
     consoleLogLevel = 0;
     kernelParams = [
       "quiet"

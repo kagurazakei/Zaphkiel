@@ -25,19 +25,20 @@
           };
         };
       };
-      programs.uwsm = {
-        enable = true;
-        waylandCompositors = {
-          hyprland = {
-            prettyName = "Hyprland";
-            comment = "Hyprland compositor manager by UWSM";
-            binPath = "/run/current-system/sw/bin/start-hyprland";
-          };
-          niri = {
-            prettyName = "Niri The Goat";
-            comment = "Niri compositor managed by UWSM";
-            binPath = "/run/current-system/sw/bin/niri-session";
-          };
+    };
+
+    programs.uwsm = {
+      enable = true;
+      waylandCompositors = {
+        hyprland = {
+          prettyName = "Hyprland";
+          comment = "Hyprland compositor manager by UWSM";
+          binPath = "/run/current-system/sw/bin/start-hyprland";
+        };
+        niri = {
+          prettyName = "Niri The Goat";
+          comment = "Niri compositor managed by UWSM";
+          binPath = "/run/current-system/sw/bin/niri-session";
         };
       };
 

@@ -14,18 +14,6 @@ let
   # Define each nixos config
 in
 {
-  quartz = nixosConfig {
-    system = null;
-    specialArgs = {
-      inherit sources zaphkiel;
-      users = [ "sumee" ];
-    };
-
-    modules = [
-      ./hosts/quartz/configuration.nix
-      ./hosts/quartz/hardware-configuration.nix
-    ];
-  };
 
   hana = nixosConfig {
     system = null;
@@ -40,42 +28,16 @@ in
     ];
   };
 
-  greenery = nixosConfig {
+  desktop = nixosConfig {
     system = null;
     specialArgs = {
       inherit sources zaphkiel;
-      users = [ "sumee" ];
+      users = [ "antonio" ];
     };
 
     modules = [
-      ./hosts/greenery/configuration.nix
-      ./hosts/greenery/hardware-configuration.nix
-    ];
-  };
-
-  kaolin = nixosConfig {
-    system = null;
-    specialArgs = {
-      inherit sources zaphkiel;
-      users = [ "sumee" ];
-    };
-
-    modules = [
-      ./hosts/kaolin/configuration.nix
-      ./hosts/kaolin/hardware-configuration.nix
-    ];
-  };
-
-  graphite = nixosConfig {
-    system = null;
-    specialArgs = {
-      inherit sources zaphkiel;
-      users = [ "sumee" ];
-    };
-
-    modules = [
-      ./hosts/graphite/configuration.nix
-      ./hosts/graphite/hardware-configuration.nix
+      ./hosts/desktop/configuration.nix
+      ./hosts/desktop/hardware-configuration.nix
     ];
   };
 }

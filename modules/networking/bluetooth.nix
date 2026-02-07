@@ -8,7 +8,7 @@
   options.kagurazakei.networking.bluetooth.enable = lib.mkEnableOption "bluetooth service";
 
   config =
-    lib.mkIf (config.kagurazakei.networking.bluetooth.enable && config.greenery.networking.enable)
+    lib.mkIf (config.kagurazakei.networking.bluetooth.enable && config.kagurazakei.networking.enable)
       {
 
         # Enable bluetooth
@@ -19,4 +19,3 @@
 
       };
 }
-

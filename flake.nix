@@ -1,14 +1,33 @@
-# Maybe the real flake is the 友達 we made along da wei.
-# Once again nahida will look by my shoulders wondering why am I wasting so much time on NixOS.
 {
-  description = "MeeSumee's Flake Config";
+  description = "kagura's Flake Config";
 
   inputs = {
 
     # NixOS Unstable
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-
-    # Hjem
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
+    nur-repo-override.url = "github:ilya-fedin/nur-repository";
+    firefox.url = "github:nix-community/flake-firefox-nightly";
+    waifu-cursors.url = "github:kagurazakei/waifu-cursors";
+    chaotic.url = "github:lonerOrz/nyx-loner";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake/beta";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+    };
+    niri.url = "github:kagurazakei/niri";
+    zakeivim.url = "github:kagurazakei/khanelivim";
+    impermanence.url = "github:nix-community/impermanence";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    shizuruPkgs.url = "github:kagurazakei/shizuruPkgs";
+    silentSDDM.url = "github:kagurazakei/silentSDDM";
+    catppuccin.url = "github:catppuccin/nix";
     hjem = {
       url = "github:feel-co/hjem";
       inputs.nix-darwin.follows = "";
@@ -16,6 +35,17 @@
       inputs.smfh.follows = "";
     };
 
+    hjem-rum = {
+      url = "github:snugnug/hjem-rum";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hjem.follows = "hjem";
+    };
+
+    hjem-impure = {
+      url = "github:Rexcrazy804/hjem-impure";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hjem.follows = "hjem";
+    };
     # Noctalia Shell
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
@@ -78,37 +108,50 @@
   };
 
   # RexCrazy804 Schematic
-  outputs = inputs: let
-    inherit (inputs) nixpkgs self systems;
-    inherit (nixpkgs) lib;
+  outputs =
+    inputs:
+    let
+      inherit (inputs) nixpkgs self systems;
+      inherit (nixpkgs) lib;
 
-    # npin integration to flakes
-    sources = import ./npins;
+      # npin integration to flakes
+      sources = import ./npins;
 
-    pkgsFor = lib.getAttrs (import systems) nixpkgs.legacyPackages;
+      pkgsFor = lib.getAttrs (import systems) nixpkgs.legacyPackages;
 
-    moduleArgs = {inherit inputs self sources lib;};
+      moduleArgs = {
+        inherit
+          inputs
+          self
+          sources
+          lib
+          ;
+      };
 
-    eachSystem = fn: lib.mapAttrs (system: pkgs: fn {inherit system pkgs;}) pkgsFor;
+      eachSystem = fn: lib.mapAttrs (system: pkgs: fn { inherit system pkgs; }) pkgsFor;
 
-    callModule = path: attrs: import path (moduleArgs // attrs);
+      callModule = path: attrs: import path (moduleArgs // attrs);
 
-  in {
-    formatter = eachSystem ({pkgs,...}: pkgs.alejandra);
+    in
+    {
+      formatter = eachSystem ({ pkgs, ... }: pkgs.alejandra);
 
-    packages = eachSystem (attrs: callModule ./pkgs attrs);
+      packages = eachSystem (attrs: callModule ./pkgs attrs);
 
-    nixosConfigurations = callModule ./hosts {};
+      nixosConfigurations = callModule ./hosts { };
 
-    checks = nixpkgs.lib.genAttrs (import systems) (
-      system:
-      let
-        inherit (nixpkgs) lib;
-        nixosMachines = lib.mapAttrs' (
-          name: config: lib.nameValuePair "nixos-${name}" config.config.system.build.toplevel
-        ) ((lib.filterAttrs (_: config: config.pkgs.stdenv.hostPlatform.system == system)) self.nixosConfigurations);
-      in
-      nixosMachines
-    );
-  };
+      checks = nixpkgs.lib.genAttrs (import systems) (
+        system:
+        let
+          inherit (nixpkgs) lib;
+          nixosMachines =
+            lib.mapAttrs' (name: config: lib.nameValuePair "nixos-${name}" config.config.system.build.toplevel)
+              (
+                (lib.filterAttrs (_: config: config.pkgs.stdenv.hostPlatform.system == system))
+                  self.nixosConfigurations
+              );
+        in
+        nixosMachines
+      );
+    };
 }

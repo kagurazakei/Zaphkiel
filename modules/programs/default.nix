@@ -10,12 +10,14 @@
     # ./aagl.nix
     ./browser.nix
     ./equibop.nix
+    ./flatpak.nix
     ./foot.nix
+    ./fuzzel.nix
     ./nixpkgs.nix
     ./nvim.nix
     ./steam.nix
     ./dolphin.nix
-    # ./vm.nix
+    ./yazi.nix
   ];
 
   options.kagurazakei.programs.enable = lib.mkEnableOption "programs";

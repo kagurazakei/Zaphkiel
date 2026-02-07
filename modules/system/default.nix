@@ -13,7 +13,7 @@
     ./fonts.nix
     ./kernel.nix
     ./input.nix
-    ./impermanence.nix.nix
+    ./impermanence.nix
     ./locale.nix
     ./nix.nix
     ./users.nix
@@ -23,7 +23,7 @@
 
   options.kagurazakei.system.enable = lib.mkEnableOption "system";
 
-  config = lib.mkIf config.greenery.system.enable {
+  config = lib.mkIf config.kagurazakei.system.enable {
 
     # Enable core firmware services
     services = {

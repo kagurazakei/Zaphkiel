@@ -28,7 +28,7 @@
                   tanjiro = pkgs.fetchurl {
                     name = "tanjiro";
                     url = "https://github.com/kagurazakei/wallpapers/blob/main/1215947.jpg";
-                    hash = "sha256-qXmnbhICMJ/I3phWt9cRT1EaxyT591r4n5TgvrAxhNI=";
+                    hash = "sha256-48TZEhOs0lqEYygpDJ52gh8THJpTo0P8mnJez0t55IM=";
                   };
                   to = [ "${tanjiro}" ];
                 in

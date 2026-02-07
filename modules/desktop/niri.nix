@@ -3,18 +3,22 @@
   pkgs,
   lib,
   users,
+  user,
   inputs,
   ...
 }:
 {
 
+  imports = [
+    ./qt.nix
+  ];
   options.kagurazakei.desktop.niri.enable = lib.mkEnableOption "niri";
 
   config = lib.mkIf (config.kagurazakei.desktop.niri.enable && config.kagurazakei.desktop.enable) {
-
     # Enable Niri
     programs.niri = {
       enable = true;
+      package = inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.niri;
     };
 
     # Set niri as default session
@@ -22,7 +26,6 @@
 
     # Xwayland satellite for X11 Windowing Support
     systemd.user.services.xwayland-satellite.wantedBy = [ "graphical-session.target" ];
-
     # Niri Dependencies
     environment.systemPackages = with pkgs; [
       xwayland-satellite
@@ -31,12 +34,18 @@
       lsd
       nitch
       fastfetch
-      anicli
       yazi
     ];
 
     # Niri Hjem config
     hjem.users = lib.genAttrs users (user: {
+      packages = with pkgs; [
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-gnome
+        kdePackages.polkit-kde-agent-1
+        polkit_gnome
+        xdg-desktop-portal-wlr
+      ];
       files =
         let
 
@@ -67,7 +76,7 @@
                 "${camerascript}/bin/camScript"
               ];
             in
-            builtins.replaceStrings from to (builtins.readFile ../../dots/niri/config.kdl);
+            builtins.replaceStrings from to (builtins.readFile ../../dots/niri/waste.kdl);
 
           # Set hypridle command
           quickidle =
@@ -92,14 +101,11 @@
           tanjiro = pkgs.fetchurl {
             name = "tanjiro";
             url = "https://github.com/kagurazakei/wallpapers/blob/main/1215947.jpg";
-            hash = "sha256-qXmnbhICMJ/I3phWt9cRT1EaxyT591r4n5TgvrAxhNI=";
+            hash = "sha256-9BypF+oea8eAzxleqBZI94JAjdcjWX+WLrPcOYYQnOM=";
           };
         in
         {
-          ".config/niri/config.kdl".text = keybinds;
           ".config/hypr/hypridle.conf".text = quickidle;
-          ".config/noctalia/colors.json".source = "../../dots/noctalia/colors.json";
-          ".config/noctalia/settings.json".source = ../../dots/noctalia/settings.json;
           "wallpapers/schizomiku.jpg".source = tanjiro;
         };
     });

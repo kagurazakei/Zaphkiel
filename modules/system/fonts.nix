@@ -18,6 +18,11 @@
         ipafont
         kochi-substitute
         source-code-pro
+        noto-fonts
+        noto-fonts-color-emoji
+        noto-fonts-cjk-sans
+        material-design-icons
+        font-awesome
         ttf_bitstream_vera
         nerd-fonts.caskaydia-mono
         nerd-fonts.caskaydia-cove
