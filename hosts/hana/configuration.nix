@@ -37,7 +37,7 @@
       enable = true;
       bluetooth.enable = true;
       # dnscrypt.enable = false;
-      openssh.enable = true;
+      openssh.enable = false;
       # taildrive.enable = true;
       # tailscale.enable = true;
     };
