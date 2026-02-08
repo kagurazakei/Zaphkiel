@@ -104,24 +104,6 @@
       programs.xwayland.enable = true;
       services.gnome.gnome-keyring.enable = true;
 
-      # Theme gtk apps
-      programs.dconf.profiles.user.databases = [
-        {
-          settings = {
-            "org/gnome/desktop/interface" = {
-              gtk-theme = "rose-pine";
-              icon-theme = "Papirus-Dark";
-              cursor-theme = "Kureiji-Ollie-v2";
-              document-font-name = "JetBrainsMono Nerd Font";
-              font-name = "JetBrainsMono Nerd Font";
-              monospace-font-name = "CaskaydiaMono NF";
-              color-scheme = "prefer-dark";
-              clock-show-weekday = true;
-            };
-          };
-        }
-      ];
-
       # Correct gtk theming for apps that don't use runtime directory
       hjem.users = lib.genAttrs users (user: {
         files =

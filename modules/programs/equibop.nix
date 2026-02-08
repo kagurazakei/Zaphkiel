@@ -18,7 +18,7 @@
         ];
         hjem.users.antonio = {
           files = {
-            ".config/equibop/setting.json".text = ''
+            ".config/equibop/settings.json".text = ''
               {
                      "MINIMIZE_TO_TRAY": true,
                      "arRPC": true,

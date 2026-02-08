@@ -13,6 +13,7 @@
     ./flatpak.nix
     ./foot.nix
     ./fuzzel.nix
+    ./lutgen.nix
     ./nixpkgs.nix
     ./nvim.nix
     ./steam.nix
