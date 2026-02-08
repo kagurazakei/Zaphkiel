@@ -51,7 +51,7 @@
       options = "--delete-older-than 7d";
     };
     extraOptions = ''
-      !include config.age.secrets.secret5.path
+      !include ${config.age.secrets.secret5.path} 
     '';
   };
 }

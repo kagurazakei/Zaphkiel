@@ -19,7 +19,6 @@
         services.hypridle = {
           enable = true;
         };
-
         # Fix paths
         systemd.user.services.hypridle.path = lib.mkForce (
           lib.attrValues {

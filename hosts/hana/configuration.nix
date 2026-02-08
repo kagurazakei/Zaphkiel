@@ -1,6 +1,7 @@
 # Beryl Configuration
 {
   lib,
+
   ...
 }:
 {
@@ -37,7 +38,7 @@
       enable = true;
       bluetooth.enable = true;
       # dnscrypt.enable = false;
-      openssh.enable = false;
+      openssh.enable = true;
       # taildrive.enable = true;
       # tailscale.enable = true;
     };

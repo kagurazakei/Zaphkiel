@@ -35,16 +35,16 @@ in
         secret5 = {
           file = ../../secrets/secret5.age;
           owner = "antonio";
+          mode = "0500";
         };
         secret6 = {
           file = ../../secrets/secret6.age;
           owner = "antonio";
         };
-        secret7 = {
-          file = ../../secrets/secret5.age;
+        secret8 = {
+          file = ../../secrets/secret8.age;
           owner = "antonio";
         };
-
       };
       users.users = {
         antonio = {

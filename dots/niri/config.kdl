@@ -174,7 +174,6 @@ binds {
 }
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
-spawn-at-startup "noctalia-shell" "-d"
 spawn-at-startup "systemctl" "--user" "start" "hjem-impure.service" "--now"
 //This was a nightmare to make but here
 // original code from; https://github.com/XansiVA

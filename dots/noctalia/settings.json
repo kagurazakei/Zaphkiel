@@ -14,7 +14,7 @@
         "position": "top_center",
         "screenshotAnnotationTool": "",
         "showCategories": true,
-        "showIconBackground": false,
+        "showIconBackground": true,
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
         "useApp2Unit": false,
@@ -25,7 +25,7 @@
         "mprisBlacklist": [
         ],
         "preferredPlayer": "",
-        "visualizerType": "linear",
+        "visualizerType": "mirrored",
         "volumeFeedback": true,
         "volumeOverdrive": true,
         "volumeStep": 5
@@ -38,7 +38,7 @@
         "exclusive": true,
         "floating": false,
         "frameRadius": 12,
-        "frameThickness": 17,
+        "frameThickness": 14,
         "hideOnOverview": false,
         "marginHorizontal": 4,
         "marginVertical": 4,
@@ -318,9 +318,40 @@
         }
     },
     "desktopWidgets": {
-        "enabled": false,
+        "enabled": true,
         "gridSnap": false,
         "monitorWidgets": [
+            {
+                "name": "eDP-1",
+                "widgets": [
+                    {
+                        "clockStyle": "analog",
+                        "customFont": "",
+                        "format": "HH:mm\\nd MMMM yyyy",
+                        "id": "Clock",
+                        "roundedCorners": true,
+                        "scale": 2.2272169643796214,
+                        "showBackground": false,
+                        "useCustomFont": false,
+                        "usePrimaryColor": true,
+                        "x": 47,
+                        "y": 77
+                    },
+                    {
+                        "hideMode": "visible",
+                        "id": "MediaPlayer",
+                        "roundedCorners": true,
+                        "scale": 1.1514571165432124,
+                        "showAlbumArt": true,
+                        "showBackground": true,
+                        "showButtons": true,
+                        "showVisualizer": true,
+                        "visualizerType": "linear",
+                        "x": 608,
+                        "y": 1066
+                    }
+                ]
+            }
         ]
     },
     "dock": {

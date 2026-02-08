@@ -14,6 +14,7 @@
       {
         environment.systemPackages = [
           pkgs.equibop
+          pkgs.arrpc
         ];
         hjem.users.antonio = {
           files = {
@@ -30,6 +31,17 @@
                      "clickTrayToShowHide": true
                  }
             '';
+          };
+          systemd.services = {
+            arRPC = {
+              description = "Discord Rich Prescence";
+              after = [ "graphical-session.target" ];
+              partOf = [ "graphical-session.target" ];
+              serviceConfig = {
+                ExecStart = "${pkgs.arrpc}/bin/arrpc";
+                Restart = "on-failure";
+              };
+            };
           };
         };
       };

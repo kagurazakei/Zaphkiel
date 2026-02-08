@@ -1,0 +1,9 @@
+# .sops.yaml
+keys:
+  - &hana age1wk93m3c6g8lqx87t8ldazt44q0h8mkyh2xz3amt57ergacjgaaaquhefef
+  - &laptop age14wpgee72zhxavuza3xzwlzhnvew2zl3vl38ap60gf8nht3etlcpqynucks
+creation_rules:
+  - path_regex: secrets/secret.yaml$
+    key_groups:
+      - age:
+          - *laptop

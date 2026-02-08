@@ -11,7 +11,6 @@ let
     inherit sources pkgs;
   };
 
-  # Define each nixos config
 in
 {
 

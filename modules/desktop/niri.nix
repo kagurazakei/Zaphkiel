@@ -3,7 +3,6 @@
   pkgs,
   lib,
   users,
-  user,
   inputs,
   ...
 }:
@@ -42,7 +41,6 @@
       packages = with pkgs; [
         xdg-desktop-portal-gtk
         xdg-desktop-portal-gnome
-        kdePackages.polkit-kde-agent-1
         polkit_gnome
         xdg-desktop-portal-wlr
       ];

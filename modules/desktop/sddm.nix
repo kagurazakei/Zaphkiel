@@ -14,11 +14,12 @@
   config = lib.mkIf (config.kagurazakei.desktop.sddm.enable && config.kagurazakei.desktop.enable) {
     environment.systemPackages = [
       inputs.waifu-cursors.packages.${pkgs.stdenv.hostPlatform.system}.Reichi-Shinigami
+      inputs.shizuruPkgs.packages.${pkgs.stdenv.hostPlatform.system}.kureiji-ollie-cursors
     ];
     services.displayManager.sddm = {
       settings = {
         Theme = {
-          CursorTheme = "Reichi-Shinigami";
+          CursorTheme = "Kureiji-Ollie-v2";
         };
       };
     };

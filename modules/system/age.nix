@@ -12,6 +12,7 @@
   age.identityPaths = [
     "/persistent/etc/sops-nix/id_ed25519"
     "/persistent/etc/sops-nix/keys.txt"
+    "/persistent/etc/sops-nix/github"
   ]
   ++ builtins.map (username: "/home/${username}/.ssh/id_ed25519") users;
 }

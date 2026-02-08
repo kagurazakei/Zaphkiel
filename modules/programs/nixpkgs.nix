@@ -53,9 +53,14 @@
         inputs.firefox.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         catppuccin-kde
+        (catppuccin-gtk.override {
+          accents = [ "pink" ];
+          variant = "mocha";
+          size = "standard";
+          tweaks = [ "normal" ];
+        })
         tmux
         zellij
-        # mpv # media player
         gparted # disk management software
         gnome-calculator # calculator
         moonlight-qt # Remote to Windows GPU-Passthru
@@ -67,10 +72,10 @@
         wlsunset # I need fucking blue light filter, my fucking eyes hurt
         ddcutil # Manipulating external monitors using i2c bus
         zpkgs.scripts.npins-show # npins-show command
-        # wo.nahidacursor # Cursor Package
         wo.cursors
         wo.catMocha-icons
         sources.kureiji-ollie-cursors
+        inputs.waifu-cursors.packages.${pkgs.stdenv.hostPlatform.system}.all
         zathura
         gtk-engine-murrine
         pavucontrol
@@ -108,9 +113,9 @@
         {
           settings = {
             "org/gnome/desktop/interface" = {
-              gtk-theme = "rose-pine";
+              gtk-theme = "Catppuccin-Dark";
               icon-theme = "Papirus-Dark";
-              cursor-theme = "Yuurei-Angel";
+              cursor-theme = "Kureiji-Ollie-v2";
               document-font-name = "JetBrainsMono Nerd Font";
               font-name = "JetBrainsMono Nerd Font";
               monospace-font-name = "CaskaydiaMono NF";
@@ -125,8 +130,8 @@
       hjem.users = lib.genAttrs users (user: {
         files =
           let
-            themeName = "rose-pine";
-            themeDir = "${pkgs.rose-pine-gtk-theme}/share/themes/${themeName}/gtk-4.0";
+            themeName = "catppuccin-mocha-pink-standard+normal";
+            themeDir = "${pkgs.catppuccin-gtk}/share/themes/${themeName}/gtk-4.0";
           in
           {
             ".config/gtk-4.0/assets".source = "${themeDir}/assets";

@@ -6,6 +6,7 @@ let
   ];
   laptop = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINjywfRHVDeBQBFYZym/c3JDVRwni//tSy5FPKmTgLyN antonio@hana"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBZ/2mQLJkKdNyfUvXI4KTneGLe6i7WXk+7Kl6ceeA7j maotsugiri@gmail.com"
   ];
 in
 {
@@ -16,4 +17,5 @@ in
   "secret5.age".publicKeys = laptop;
   "secret6.age".publicKeys = laptop;
   "secret7.age".publicKeys = laptop;
+  "secret8.age".publicKeys = laptop;
 }

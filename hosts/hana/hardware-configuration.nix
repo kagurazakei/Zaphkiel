@@ -8,7 +8,7 @@
 }:
 {
   imports = [
-
+    inputs.nixos-hardware.nixosModules.huawei-machc-wa
   ];
 
   boot.initrd.availableKernelModules = [

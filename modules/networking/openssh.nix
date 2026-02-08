@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  users,
   ...
 }:
 {
@@ -19,12 +18,8 @@
           knownHosts = {
             "hana".publicKey =
               "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINjywfRHVDeBQBFYZym/c3JDVRwni//tSy5FPKmTgLyN antonio@hana";
-          };
-
-          settings = {
-            PasswordAuthentication = false;
-            PermitRootLogin = "no";
-            AllowUsers = users;
+            "laptop".publicKey =
+              "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBZ/2mQLJkKdNyfUvXI4KTneGLe6i7WXk+7Kl6ceeA7j maotsugiri@gmail.com";
           };
         };
 
