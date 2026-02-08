@@ -11,10 +11,6 @@
   config =
     lib.mkIf (config.kagurazakei.hardware.intelgpu.enable && config.kagurazakei.hardware.enable)
       {
-        xserver.videoDriver = [
-          "modesetting"
-          "nvidia"
-        ];
         chaotic.nyx.overlay.enable = true;
         environment.systemPackages = with pkgs; [
           vulkanPackages_latest.vulkan-loader
@@ -70,8 +66,6 @@
             nvidiaBusId = "PCI:1:0:0";
           };
         };
-
-        # Suggest intel HD graphics to programs that use iGPU
         environment.sessionVariables = {
           LIBVA_DRIVER_NAME = "iHD";
         };

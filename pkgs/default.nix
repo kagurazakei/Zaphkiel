@@ -17,7 +17,7 @@ lib.fix (
     };
     cursors = callPackage ./cursors.nix { };
     qt6ct = callPackage ./qt6ct { };
-    mpv-wrapped = callPackage ./mpv-wrapped/package.nix { };
+    mpv-wrapped = callPackage ./mpv.nix { };
     catMocha-icons = callPackage ./papirus-catppuccin.nix { };
   }
 )

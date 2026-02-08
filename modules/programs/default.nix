@@ -18,6 +18,7 @@
     ./steam.nix
     ./dolphin.nix
     ./yazi.nix
+    ./mpv.nix
   ];
 
   options.kagurazakei.programs.enable = lib.mkEnableOption "programs";

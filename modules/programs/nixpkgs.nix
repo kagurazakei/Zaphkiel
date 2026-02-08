@@ -68,7 +68,6 @@
         ddcutil # Manipulating external monitors using i2c bus
         zpkgs.scripts.npins-show # npins-show command
         # wo.nahidacursor # Cursor Package
-        wo.mpv-wrapped
         wo.cursors
         wo.catMocha-icons
         sources.kureiji-ollie-cursors
