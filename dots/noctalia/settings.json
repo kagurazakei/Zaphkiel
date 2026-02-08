@@ -211,12 +211,6 @@
                     "middleClickCommand": "pwvucontrol || pavucontrol"
                 },
                 {
-                    "defaultSettings": {
-                        "position": "Bottom"
-                    },
-                    "id": "plugin:clipper"
-                },
-                {
                     "id": "PowerProfile"
                 },
                 {

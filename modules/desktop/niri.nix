@@ -94,17 +94,9 @@
             in
             builtins.replaceStrings from to (builtins.readFile ../../dots/hyprland/hypridle.conf);
 
-          # Set noctalia wallpaper
-
-          tanjiro = pkgs.fetchurl {
-            name = "tanjiro";
-            url = "https://github.com/kagurazakei/wallpapers/blob/main/1215947.jpg";
-            hash = "sha256-9BypF+oea8eAzxleqBZI94JAjdcjWX+WLrPcOYYQnOM=";
-          };
         in
         {
           ".config/hypr/hypridle.conf".text = quickidle;
-          "wallpapers/schizomiku.jpg".source = tanjiro;
         };
     });
   };

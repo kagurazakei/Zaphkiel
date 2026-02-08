@@ -8,7 +8,7 @@
 {
   imports = [
     # Import files
-    # ./greetd.nix
+    ./greetd.nix
     ./hypridle.nix
     ./hyprland.nix
     ./hyprlock.nix
@@ -27,15 +27,5 @@
       NIXOS_OZONE_WL = "1";
       ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     };
-
-    # Hjem for file management
-    hjem.users = lib.genAttrs users (user: {
-      files = {
-        ".config/mpv".source = ../../dots/mpv;
-        ".config/fuzzel/fuzzel.ini".source = ../../dots/fuzzel/fuzzel.ini;
-        ".config/fuzzel/themes".source = sources.catfuzzel + "/themes";
-      };
-    });
-
   };
 }

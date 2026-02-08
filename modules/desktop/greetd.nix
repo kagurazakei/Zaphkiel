@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -10,6 +11,10 @@
 
   config = lib.mkIf (config.kagurazakei.desktop.greetd.enable && config.kagurazakei.desktop.enable) {
 
+    environment.systemPackages = [
+      inputs.waifu-cursors.packages.${pkgs.stdenv.hostPlatform.system}.Reichi-Shinigami
+      inputs.shizuruPkgs.packages.${pkgs.stdenv.hostPlatform.system}.kureiji-ollie-cursors
+    ];
     services = {
       colord.enable = true;
       greetd = {

@@ -4,7 +4,6 @@ environment {
     ELECTRON_ENABLE_HARDWARE_ACCELERATION "1"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     GDK_BACKEND "wayland,x11"
-    GTK2_RC_FILES "/home/antonio/.gtkrc-2.0"
     JAVA_AWT_WM_NONEREPARENTING "1"
     MOZ_ENABLE_WAYLAND "1"
     NIXOS_OZONE_WL "1"
@@ -174,7 +173,7 @@ binds {
 }
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
-spawn-at-startup "systemctl" "--user" "start" "hjem-impure.service" "--now"
+// spawn-at-startup "systemctl" "--user" "start" "hjem-impure.service" "--now"
 //This was a nightmare to make but here
 // original code from; https://github.com/XansiVA
 animations {

@@ -37,6 +37,12 @@ in
             url = "https://github.com/kagurazakei/shizuru/blob/main/configs/profile.png";
             hash = "sha256-QXKhMCjVpXTZnGd3pfFKb8w7xx6lSLPYwC/32fcggJU=";
           };
+
+          tanjiro = pkgs.fetchurl {
+            name = "tanjiro";
+            url = "https://github.com/kagurazakei/wallpapers/blob/main/1215947.jpg";
+            hash = "sha256-9BypF+oea8eAzxleqBZI94JAjdcjWX+WLrPcOYYQnOM=";
+          };
           dot = config.hjem.users.${username}.impure.dotsDir;
         in
         {
@@ -62,6 +68,7 @@ in
           "nushell/git-status.nu".source = lib.mkForce (dot + "/nushell/git-status.nu");
           "noctalia/colors.json".source = lib.mkForce (dot + "/noctalia/colors.json");
           "noctalia/settings.json".source = lib.mkForce (dot + "/noctalia/settings.json");
+          "wallpapers/schizomiku.jpg".source = tanjiro;
 
           ### Wezterm Config
           "wezterm/wezterm.lua".source = lib.mkForce (dot + "/wezterm/wezterm.lua");

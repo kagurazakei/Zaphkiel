@@ -53,12 +53,7 @@
         inputs.firefox.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         catppuccin-kde
-        (catppuccin-gtk.override {
-          accents = [ "pink" ];
-          variant = "mocha";
-          size = "standard";
-          tweaks = [ "normal" ];
-        })
+        komikku
         tmux
         zellij
         gparted # disk management software
@@ -89,6 +84,7 @@
         zoxide
         dart-sass
         sass
+        libadwaita
         wf-recorder
         sassc
         libgtop
@@ -113,7 +109,7 @@
         {
           settings = {
             "org/gnome/desktop/interface" = {
-              gtk-theme = "Catppuccin-Dark";
+              gtk-theme = "rose-pine";
               icon-theme = "Papirus-Dark";
               cursor-theme = "Kureiji-Ollie-v2";
               document-font-name = "JetBrainsMono Nerd Font";
@@ -130,8 +126,8 @@
       hjem.users = lib.genAttrs users (user: {
         files =
           let
-            themeName = "catppuccin-mocha-pink-standard+normal";
-            themeDir = "${pkgs.catppuccin-gtk}/share/themes/${themeName}/gtk-4.0";
+            themeName = "rose-pine";
+            themeDir = "${pkgs.rose-pine-gtk-theme}/share/themes/${themeName}/gtk-4.0";
           in
           {
             ".config/gtk-4.0/assets".source = "${themeDir}/assets";
