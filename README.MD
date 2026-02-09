@@ -37,5 +37,32 @@
 - 📝 **VSCodium & NixVim(khanelivim)** – Code editors
 - 🐟 **Fish + Starship** – Shell environment
 - 🖥️ **Foot + Kitty** – Terminal emulators
-
+- 🦊 **Browser ** – Firefox Nightly
+- 👾 **Viu** – Viu For Anime Media
+- 🥭 **Manga Reader** – Komikku For Manga Reader
 ---
+
+### Main Desktop
+<div align="center">
+  <img src="./.github/assets/screenshots/niri1.png" width="30%" alt="Niri Desktop"/>
+</div>
+
+### Browser
+<div align="center">
+  <img src="./.github/assets/screenshots/niri2.png" width="30%" alt="Niri Browser"/>
+</div>
+
+### Manga Reader
+<div align="center">
+  <img src="./.github/assets/screenshots/niri3.png" width="30%" alt="Niri Managa Reader"/>
+</div>
+
+### Terminal Related
+<div align="center">
+  <img src="./.github/assets/screenshots/niri4.png" width="30%" alt="Niri Terminal"/>
+</div>
+
+### Viu for anime watching
+<div align="center">
+  <img src="./.github/assets/screenshots/niri5.png" width="30%" alt="Niri Anime Watching"/>
+</div>
