@@ -58,4 +58,4 @@ if command -q nix-your-shell
     nix-your-shell fish | source
 end
 set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
-carapace _carapace | source
+# carapace _carapace | source

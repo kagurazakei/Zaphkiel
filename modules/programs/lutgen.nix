@@ -3,13 +3,13 @@ let
   makeWrapper =
     name: args:
     pkgs.writeShellScriptBin name ''
-      exec ${pkgs.master.lutgen}/bin/lutgen apply ${args} --preserve -p tokyo-mod
+      exec ${pkgs.lutgen}/bin/lutgen apply ${args} --preserve -p tokyo-mod
     '';
 in
 {
   hjem.users.antonio = {
     packages = [
-      pkgs.master.lutgen
+      pkgs.lutgen
       (makeWrapper "lutgen-jpg" "*.jpg")
       (makeWrapper "lutgen-png" "*.png")
       (makeWrapper "lutgen-all" "*.jpg *.png *.jpeg")

@@ -18,4 +18,5 @@ in
   "secret6.age".publicKeys = laptop;
   "secret7.age".publicKeys = laptop;
   "secret8.age".publicKeys = laptop;
+  "secret9.age".publicKeys = laptop;
 }

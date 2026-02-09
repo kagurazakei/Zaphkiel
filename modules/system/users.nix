@@ -36,13 +36,19 @@ in
           file = ../../secrets/secret5.age;
           owner = "antonio";
           mode = "0500";
+          path = "/etc/nix/nix-access-token.conf";
         };
         secret6 = {
           file = ../../secrets/secret6.age;
           owner = "antonio";
+          path = "/home/antonio/.config/keys/github.txt";
         };
         secret8 = {
           file = ../../secrets/secret8.age;
+          owner = "antonio";
+        };
+        secret9 = {
+          file = ../../secrets/secret9.age;
           owner = "antonio";
         };
       };

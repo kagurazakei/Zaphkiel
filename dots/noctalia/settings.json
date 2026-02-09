@@ -151,9 +151,6 @@
                     "unfocusedIconsOpacity": 1
                 },
                 {
-                    "id": "WallpaperSelector"
-                },
-                {
                     "deviceNativePath": "",
                     "displayMode": "onhover",
                     "hideIfIdle": false,
@@ -168,17 +165,24 @@
                 },
                 {
                     "colorizeIcons": false,
-                    "hideMode": "visible",
-                    "id": "ActiveWindow",
-                    "maxWidth": 145,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "useFixedWidth": true
+                    "hideMode": "hidden",
+                    "iconScale": 0.8,
+                    "id": "Taskbar",
+                    "maxTaskbarWidth": 40,
+                    "onlyActiveWorkspaces": true,
+                    "onlySameOutput": true,
+                    "showPinnedApps": true,
+                    "showTitle": false,
+                    "smartWidth": true,
+                    "titleWidth": 120
                 }
             ],
             "right": [
                 {
                     "id": "WallpaperSelector"
+                },
+                {
+                    "id": "PowerProfile"
                 },
                 {
                     "customFont": "",
@@ -209,9 +213,6 @@
                     "displayMode": "onhover",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol"
-                },
-                {
-                    "id": "PowerProfile"
                 },
                 {
                     "colorName": "error",
@@ -445,7 +446,8 @@
         "location": "top",
         "lowUrgencyDuration": 3,
         "monitors": [
-            "HDMI-A-1"
+            "HDMI-A-1",
+            "eDP-1"
         ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,

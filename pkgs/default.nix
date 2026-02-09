@@ -9,15 +9,15 @@ lib.fix (
     inherit (pkgs) callPackage;
   in
   {
-    # favCursor = callPackage ./cursors.nix { };
     favIcon = callPackage ./favCatIcon.nix { };
     iconsTheme = pkgs.catppuccin-papirus-folders.override {
       accent = "pink";
       flavor = "mocha";
     };
+    mpv-wrapped = callPackage ./mpv-wrapped.nix { };
     cursors = callPackage ./cursors.nix { };
     qt6ct = callPackage ./qt6ct { };
-    mpv-wrapped = callPackage ./mpv.nix { };
     catMocha-icons = callPackage ./papirus-catppuccin.nix { };
+    viu-custom = callPackage ./viu.nix { };
   }
 )

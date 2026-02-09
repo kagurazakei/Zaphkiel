@@ -6,7 +6,7 @@ let
     exec ${pkgs.mpv}/bin/mpv \
       --gpu-context=wayland \
       --vo=gpu \
-      --hwdec=disable \
+      --hwdec=no \
       "$@"
   '';
 

@@ -69,6 +69,7 @@
         zpkgs.scripts.npins-show # npins-show command
         wo.cursors
         wo.catMocha-icons
+        wo.viu-custom
         sources.kureiji-ollie-cursors
         inputs.waifu-cursors.packages.${pkgs.stdenv.hostPlatform.system}.all
         zathura
