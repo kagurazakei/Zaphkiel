@@ -5,7 +5,7 @@
 
 <p align="center">
   <img src="./.github/assets/logo/flake.png" width="100px" alt="Shizuru Logo"/>
-  <h1 align="center">Shizuru</h1>
+  <h1 align="center">kagura</h1>
   <p align="center">Aesthetic, Modular NixOS Configuration</p>
   <p align="center"><img src="./.github/assets/pallet/macchiato.png" width="600px" alt="Color Palette"/></p>
 </p>
@@ -18,5 +18,24 @@
 [![License](https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&colorA=1E1E2E&colorB=A5ADCB&logo=unlicense&logoColor=C6A0F6)](LICENSE)
 
 </div>
+
+---
+
+### Core
+
+- 💽 **npins** – Declarative and reproducible system
+- ❄️ **Flakes** – Legacy support during transition
+- 🏡 **hjem + hjem-rum** + hjem-impure – Modular home config system
+
+### Desktop Environment
+
+- 🏠 **Niri** – Primary Wayland compositor
+- 📊 **QuickShell** – System panel and desktop UI
+
+### Applications
+
+- 📝 **VSCodium & NixVim(khanelivim)** – Code editors
+- 🐟 **Fish + Starship** – Shell environment
+- 🖥️ **Foot + Kitty** – Terminal emulators
 
 ---
