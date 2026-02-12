@@ -45,7 +45,7 @@
         "monitors": [
         ],
         "outerCorners": true,
-        "position": "top",
+        "position": "left",
         "screenOverrides": [
         ],
         "showCapsule": true,
@@ -313,7 +313,7 @@
         }
     },
     "desktopWidgets": {
-        "enabled": true,
+        "enabled": false,
         "gridSnap": false,
         "monitorWidgets": [
             {
@@ -486,7 +486,7 @@
         "enableCountdown": true,
         "largeButtonsLayout": "grid",
         "largeButtonsStyle": false,
-        "position": "center",
+        "position": "top_center",
         "powerOptions": [
             {
                 "action": "lock",
@@ -624,7 +624,7 @@
         "transitionType": "random",
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "browse",
+        "viewMode": "single",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",

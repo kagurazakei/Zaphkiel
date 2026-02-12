@@ -44,6 +44,17 @@
         polkit_gnome
         xdg-desktop-portal-wlr
       ];
+      systemd.services = {
+        hjem-impure = {
+          description = "Hjem Impure Systemd Servce";
+          after = [ "graphical-session.target" ];
+          partOf = [ "graphical-session.target" ];
+          serviceConfig = {
+            ExecStart = "/etc/profiles/per-user/antonio/bin/hjem-impure";
+            Restart = "on-failure";
+          };
+        };
+      };
       files =
         let
 

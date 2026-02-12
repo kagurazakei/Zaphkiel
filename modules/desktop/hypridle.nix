@@ -19,6 +19,9 @@
         services.hypridle = {
           enable = true;
         };
+        services.noctalia-shell = {
+          enable = true;
+        };
         # Fix paths
         systemd.user.services.hypridle.path = lib.mkForce (
           lib.attrValues {

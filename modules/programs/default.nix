@@ -8,6 +8,7 @@
 
   imports = [
     # ./aagl.nix
+    ./atuin.nix
     ./browser.nix
     ./equibop.nix
     ./flatpak.nix
@@ -18,6 +19,7 @@
     ./nvim.nix
     ./steam.nix
     ./dolphin.nix
+    ./vscodium.nix
     ./yazi.nix
     ./mpv.nix
   ];

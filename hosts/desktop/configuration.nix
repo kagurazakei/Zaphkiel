@@ -54,6 +54,7 @@
       desktop.enable = true;
       nvim.enable = true;
       steam.enable = false;
+      vscodium.enable = true;
       flatpak.enable = true;
     };
 

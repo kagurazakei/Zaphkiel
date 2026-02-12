@@ -22,6 +22,7 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nh.url = "github:nix-community/nh";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     nix-gaming = {
       url = "github:fufexan/nix-gaming";

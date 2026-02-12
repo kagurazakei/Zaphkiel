@@ -1,16 +1,11 @@
 {
   config,
-  inputs,
-  sources,
   lib,
-  pkgs,
-  users,
   ...
 }:
 let
 
   inherit (lib) mkEnableOption mkMerge mkIf;
-  dots = "${../../dots}";
 in
 {
   imports = [

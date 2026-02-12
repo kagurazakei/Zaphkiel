@@ -1,0 +1,183 @@
+{
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[nix]": {
+    "editor.defaultFormatter": "jnoortheen.nix-ide"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "catppuccin.accentColor": "mauve",
+  "catppuccin.boldKeywords": true,
+  "catppuccin.bracketMode": "rainbow",
+  "catppuccin.extraBordersEnabled": false,
+  "catppuccin.italicComments": true,
+  "catppuccin.italicKeywords": true,
+  "catppuccin.syncWithIconPack": true,
+  "catppuccin.workbenchMode": "default",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 17,
+  "editor.fontWeight": "600",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.guides.indentation": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.padding": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "on",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.parameterHints.enabled": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.showUnused": true,
+  "editor.snippetSuggestions": "top",
+  "editor.stickyScroll.enabled": true,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "indent",
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "cmd": "/nix/store/xcl2gd1nvc206kylyaa3swq5nz1ywwpj-goimports-reviser-3.10.0/bin/goimports-reviser -rm-unused -set-alias -format -use-cache -output write ${file}",
+        "match": "\\.go$"
+      },
+      {
+        "cmd": "/nix/store/h53g33cbs5hjwb0rn21n7qkpp0s1qzay-golines-0.13.0/bin/golines ${file} -w",
+        "match": "\\.go$"
+      }
+    ]
+  },
+  "errorLens.gutterIconSet": "defaultOutline",
+  "errorLens.gutterIconsEnabled": true,
+  "eslint.format.enable": true,
+  "eslint.problems.shortenToSingleLine": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "astro",
+    "svelte"
+  ],
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "files.autoSave": "onWindowChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "always",
+  "go.alternateTools": {
+    "delve": "/nix/store/6p0zv83gmnrr999mfs0hzd2120mgj2sl-delve-1.26.0/bin/dlv",
+    "gofumpt": "/nix/store/9zmph2pf0s3qmzqzwfki5x47fh7rip8g-gofumpt-0.9.2/bin/gofumpt",
+    "golangci-lint": "/nix/store/kj9ibnlg1p3macpcw8lm4rhpcwgfjal1-golangci-lint-2.8.0/bin/golangci-lint",
+    "gomodifytags": "/nix/store/q2zfvj2vkln7m3dpzd8mv9zjqqrvq5vg-gomodifytags-1.17.0/bin/gomodifytags",
+    "gopls": "/nix/store/3bfgzysvkjwf4rdpbnn4jb4ly21m1khd-gopls-0.21.0/bin/gopls",
+    "impl": "/nix/store/ah2cwvgl90645xpy4bxq33j17dxnq46x-impl-1.4.0/bin/impl",
+    "staticcheck": "/nix/store/m7dl0mdj7ffiylh2lp90vlgjy1rmnzg0-go-tools-2025.1.1/bin/staticcheck"
+  },
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  "go.lintTool": "golangci-lint",
+  "go.useLanguageServer": true,
+  "gopls": {
+    "formatting.gofumpt": true,
+    "ui.semanticTokens": true
+  },
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.preferGoToSourceDefinition": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "/nix/store/dj8d51fg2gq58n631yfsgk7yb152xb49-nil-2025-06-13/bin/nil",
+  "nix.serverSettings": {
+    "nil": {
+      "formatting": {
+        "command": [
+          "/nix/store/fqc2w0lqhnfilywlf8q2r6dc98q9ppby-alejandra-4.0.0/bin/alejandra"
+        ]
+      }
+    }
+  },
+  "prettier.jsxSingleQuote": true,
+  "redhat.telemetry.enabled": false,
+  "svelte.enable-ts-plugin": true,
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono', 'monospace', monospace",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.minimumContrastRatio": 1,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.preferGoToSourceDefinition": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "update.mode": "none",
+  "update.showReleaseNotes": false,
+  "window.dialogStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
+  "workbench.activityBar.location": "bottom",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.showTabs": "single",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.layoutControl.enabled": false,
+  "workbench.layoutControl.type": "menu",
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  "workbench.tree.indent": 16
+}

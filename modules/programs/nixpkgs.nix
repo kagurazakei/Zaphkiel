@@ -26,12 +26,25 @@
     (lib.mkIf (config.kagurazakei.programs.core.enable && config.kagurazakei.programs.enable) {
       environment.systemPackages = with pkgs; [
         btop # hardware monitor
+        nix-your-shell
+        ani-cli
+        pokemon-colorscripts
+        rofi
+        krabby
+        g-ls
+        carapace
+        carapace-bridge
+        app2unit
+        any-nix-shell
+        bat
+        duf
         tree # enables tree view in terminal
         unzip # unzip cli utility
         fzf # Fuzzy finder
         npins # Npins source manager
         speedtest-cli # internet speedtest cli utility
         nwg-look
+        vscodium
       ];
 
       # Enables intel gpu monitoring
@@ -96,8 +109,6 @@
         dbus-glib
         gtkmm4
         nwg-look
-        # Noctalia Shell
-        inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
 
       # Core desktop services

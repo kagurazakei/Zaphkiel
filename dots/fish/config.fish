@@ -1,7 +1,7 @@
 source ~/.config/fish/user_variables.fish
 source ~/.config/fish/abbreviations.fish
 source ~/.config/fish/aliases.fish
-
+source ~/.config/fish/colors.fish
 set -xg ATUIN_NOBIND true
 atuin init fish | source
 any-nix-shell fish --info-right | source

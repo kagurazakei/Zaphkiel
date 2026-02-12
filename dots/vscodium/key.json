@@ -1,0 +1,17 @@
+[
+  {
+    "command": "workbench.action.terminal.focus",
+    "key": "ctrl+`",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "workbench.action.focusActiveEditorGroup",
+    "key": "ctrl+`",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "editor.action.formatDocument",
+    "key": "alt+f",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  }
+]

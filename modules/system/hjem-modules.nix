@@ -2,7 +2,6 @@
   inputs,
   lib,
   config,
-  users,
   sources,
   pkgs,
   ...
@@ -15,6 +14,7 @@ in
 
   imports = [
     inputs.hjem.nixosModules.default
+    (lib.mkAliasOptionModule [ "hj" ] [ "hjem" "users" "${username}" ])
   ];
   hjem = {
     extraModules = [
@@ -48,8 +48,8 @@ in
         {
 
           ".face.icon".source = profile;
-          ".config/btop/btop.conf".source = ../../dots/btop/btop.conf;
-          ".config/btop/themes".source = sources.rosebtop;
+          "btop/btop.conf".source = ../../dots/btop/btop.conf;
+          "btop/themes".source = sources.rosebtop;
           "fish/config.fish".source = lib.mkForce (dot + "/fish/config.fish");
           "fish/user_variables.fish".source = lib.mkForce (dot + "/fish/user_variables.fish");
           "fish/abbreviations.fish".source = lib.mkForce (dot + "/fish/abbreviations.fish");
