@@ -1,8 +1,6 @@
 {
   config,
   lib,
-  pkgs,
-  inputs,
   ...
 }:
 {
@@ -11,10 +9,6 @@
 
   config = lib.mkIf (config.kagurazakei.desktop.greetd.enable && config.kagurazakei.desktop.enable) {
 
-    environment.systemPackages = [
-      inputs.waifu-cursors.packages.${pkgs.stdenv.hostPlatform.system}.Reichi-Shinigami
-      inputs.shizuruPkgs.packages.${pkgs.stdenv.hostPlatform.system}.kureiji-ollie-cursors
-    ];
     services = {
       colord.enable = true;
       greetd = {
@@ -26,7 +20,7 @@
           };
           default_session = {
             user = "greeter";
-            command = "${pkgs.tuigreet}/bin/tuigreet --user-menu -w 50 --window-padding 7 --container-padding 7 --remember --remember-session --time --theme 'border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red' --cmd uwsm start niri-uwsm.desktop";
+            command = "tuigreet --user-menu -w 50 --window-padding 7 --container-padding 7 --remember --remember-session --time --theme 'border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red' --cmd uwsm start niri-uwsm.desktop";
           };
         };
       };

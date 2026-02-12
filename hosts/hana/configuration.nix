@@ -20,9 +20,9 @@
       hyprlock.enable = true;
       niri.enable = true;
       # kurukurudm.enable = true;
-      sddm.enable = false;
+      sddm.enable = true;
       xserver.enable = true;
-      greetd.enable = true;
+      greetd.enable = false;
     };
 
     hardware = {

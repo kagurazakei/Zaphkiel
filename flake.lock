@@ -2021,11 +2021,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769449928,
-        "narHash": "sha256-fV7n9IWFZqC7qg7GAF3sO1VEadRaPCI6uf9CT0H9g+A=",
+        "lastModified": 1770897626,
+        "narHash": "sha256-BfUt5stU3W8mrQCcJ2i2oP/8zGpoT1w8eGpi+UmgM2Y=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "e66a77a801e09d3fbaca7a7e595e5b94167d838b",
+        "rev": "83e9666e8e6482c1aa5aa8531507491c9cf758b1",
         "type": "github"
       },
       "original": {
@@ -2165,6 +2165,7 @@
         "silentSDDM": "silentSDDM",
         "sops-nix": "sops-nix",
         "systems": "systems_6",
+        "tuigreet": "tuigreet",
         "waifu-cursors": "waifu-cursors",
         "wsl": "wsl",
         "zakeivim": "zakeivim",
@@ -2469,6 +2470,26 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "tuigreet": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1769070572,
+        "narHash": "sha256-gVrr8DEPml/VV5aLfLZ170VS2NNnla0BqG7sJjwNWXg=",
+        "owner": "notashelf",
+        "repo": "tuigreet",
+        "rev": "46556a7af6e9e639fd5e30d80265cf723fbb2478",
+        "type": "github"
+      },
+      "original": {
+        "owner": "notashelf",
+        "repo": "tuigreet",
         "type": "github"
       }
     },

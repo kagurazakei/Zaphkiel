@@ -44,12 +44,6 @@
         "loneros.cachix.org-1:dVCECfW25sOY3PBHGBUwmQYrhRRK2+p37fVtycnedDU="
       ];
     };
-    gc = {
-      persistent = true;
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
     extraOptions = ''
       !include ${config.age.secrets.secret5.path} 
     '';

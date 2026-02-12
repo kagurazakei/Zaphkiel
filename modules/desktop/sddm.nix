@@ -16,6 +16,12 @@
       inputs.waifu-cursors.packages.${pkgs.stdenv.hostPlatform.system}.Reichi-Shinigami
       inputs.shizuruPkgs.packages.${pkgs.stdenv.hostPlatform.system}.kureiji-ollie-cursors
     ];
+    hj = {
+      packages = [
+        inputs.waifu-cursors.packages.${pkgs.stdenv.hostPlatform.system}.Reichi-Shinigami
+        inputs.shizuruPkgs.packages.${pkgs.stdenv.hostPlatform.system}.kureiji-ollie-cursors
+      ];
+    };
     services.displayManager.sddm = {
       settings = {
         Theme = {

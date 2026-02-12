@@ -85,6 +85,7 @@
         wo.viu-custom
         sources.kureiji-ollie-cursors
         inputs.waifu-cursors.packages.${pkgs.stdenv.hostPlatform.system}.all
+        inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
         zathura
         gtk-engine-murrine
         pavucontrol

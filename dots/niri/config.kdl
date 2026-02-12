@@ -241,7 +241,7 @@ input {
     workspace-auto-back-and-forth
 }
 output "eDP-1" {
-    scale 1.2
+    scale 1.0
     transform "normal"
     mode "2160x1440"
 }
