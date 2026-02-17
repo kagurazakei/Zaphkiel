@@ -1,11 +1,37 @@
-{
+{shizuruPkgs, ...}: {
   dandelion.modules.boot = {pkgs, ...}: {
+    environment.systemPackages = [
+      shizuruPkgs.packages.${pkgs.stdenv.hostPlatform.system}.kureiji-ollie-cursors
+    ];
     boot = {
-      kernelPackages = pkgs.linuxPackages_latest;
-      loader.systemd-boot.enable = true;
-      loader.efi.canTouchEfiVariables = true;
-      supportedFilesystems = ["ntfs"];
+      consoleLogLevel = 0;
+      loader.efi = {
+        canTouchEfiVariables = true;
+      };
       loader.timeout = 0;
+      loader.systemd-boot = {
+        enable = true;
+        consoleMode = "max";
+        configurationLimit = 8;
+        editor = false;
+      };
+      tmp = {
+        useTmpfs = false;
+        tmpfsSize = "30%";
+      };
+      binfmt.registrations.appimage = {
+        wrapInterpreterInShell = true;
+        interpreter = "${pkgs.appimage-run}/bin/appimage-run";
+        recognitionType = "magic";
+        offset = 0;
+        mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
+        magicOrExtension = ''\x7fELF....AI\x02'';
+      };
+      plymouth = {
+        enable = true;
+        themePackages = [shizuruPkgs.packages.${pkgs.stdenv.hostPlatform.system}.cat-plymouth];
+        theme = "catppuccin-mocha-mod";
+      };
     };
   };
 }

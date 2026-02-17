@@ -15,7 +15,25 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     systems.url = "github:nix-systems/x86_64-linux";
     crane.url = "github:ipetkov/crane";
+    chaotic.url = "github:lonerOrz/nyx-loner";
+    impermanence.url = "github:nix-community/impermanence";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    niri.url = "github:kagurazakei/niri";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nur-repo-override.url = "github:ilya-fedin/nur-repository";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    shizuruPkgs.url = "github:kagurazakei/shizuruPkgs";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
+    firefox.url = "github:nix-community/flake-firefox-nightly";
+    waifu-cursors.url = "github:kagurazakei/waifu-cursors";
     mnw.url = "github:Gerg-L/mnw";
+    zakeivim.url = "github:kagurazakei/khanelivim";
     nixos-wsl = {
       url = "github:nix-community/nixos-wsl";
       inputs.nixpkgs.follows = "nixpkgs";

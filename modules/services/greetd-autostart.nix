@@ -4,8 +4,8 @@
       enable = true;
       settings = let
         initial_session = {
-          command = "uwsm start default";
-          user = "rexies";
+          command = "uwsm start niri-uwsm.desktop";
+          user = "antonio";
         };
       in {
         inherit initial_session;

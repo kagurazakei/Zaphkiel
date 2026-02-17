@@ -10,7 +10,10 @@
         enable = lib.mkEnableOption "optimus prime";
         igpu = {
           vendor = lib.mkOption {
-            type = lib.types.enum ["amd" "intel"];
+            type = lib.types.enum [
+              "amd"
+              "intel"
+            ];
             default = "amd";
           };
           port = lib.mkOption {
@@ -38,12 +41,48 @@
         ];
       };
       services.xserver.videoDrivers = ["nvidia"];
-      environment.systemPackages = [pkgs.zenith-nvidia];
 
+      environment.systemPackages = with pkgs; [
+        vulkanPackages_latest.vulkan-loader
+        vulkanPackages_latest.vulkan-tools
+        libva-utils
+        tmux
+        bottom
+        htop
+        egl-wayland
+        mesa
+        zenith-nvidia
+      ];
+      boot = {
+        kernelModules = [
+          "nvidia"
+          "nvidia_modeset"
+          "nvidia_uvm"
+          "nvidia_drm"
+        ];
+
+        kernelParams = [
+          "nvidia-drm.modeset=1"
+          "nvidia-drm.fbdev=1"
+        ];
+      };
+
+      hardware.graphics = {
+        enable = true;
+        enable32Bit = true;
+        extraPackages = with pkgs; [
+          libva-vdpau-driver
+          libvdpau
+          libvdpau-va-gl
+          nvidia-vaapi-driver
+          vdpauinfo
+          libva
+          libva-utils
+        ];
+      };
       hardware.nvidia = {
         modesetting.enable = true;
         dynamicBoost.enable = true;
-
         powerManagement = {
           enable = true;
           finegrained = cfg.hybrid.enable;
@@ -51,10 +90,10 @@
 
         # Use the NVidia open source kernel module (not to be confused with the
         # independent third-party "nouveau" open source driver).
-        open = true;
+        open = false;
 
         nvidiaSettings = true;
-        package = config.boot.kernelPackages.nvidiaPackages.latest;
+        package = config.boot.kernelPackages.nvidiaPackages.stable;
 
         prime = lib.mkIf cfg.hybrid.enable {
           offload = {

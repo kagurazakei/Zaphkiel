@@ -1,6 +1,6 @@
 {self, ...}: let
   inherit (self.lib) mkDotsModule;
-  username = "rexies";
+  username = "antonio";
 in {
   dandelion.users.rexies = {
     pkgs,
@@ -8,20 +8,45 @@ in {
     lib,
     ...
   }: {
+    imports = [
+      (lib.mkAliasOptionModule ["hj"] ["hjem" "users" "${username}"])
+    ];
     zaphkiel = {
       data.users = [username];
-      secrets.rexiesPass = {
-        file = self.paths.secrets + /secret1.age;
-        owner = username;
+      secrets = {
+        antonioPass = {
+          file = self.paths.secrets + /secret1.age;
+          owner = username;
+        };
+        secret2 = {
+          file = ../../secrets/secret2.age;
+          owner = "antonio";
+          mode = "0500";
+          path = "/etc/nix/nix-access-token.conf";
+        };
+        recovery = {
+          file = ../../secrets/recovery.age;
+          owner = "root";
+          path = "/home/${username}/.config/keys/recovery.txt";
+        };
+        anilist = {
+          file = ../../secrets/anilist.age;
+          owner = "antonio";
+          path = "/home/${username}/.config/keys/anilist.txt";
+        };
       };
     };
 
     users.users.${username} = {
-      description = "Rexiel Scarlet";
+      description = "Kagurazakei";
       shell = pkgs.fish;
       isNormalUser = true;
-      extraGroups = ["networkmanager" "wheel" "multimedia"];
-      hashedPasswordFile = config.age.secrets.rexiesPass.path;
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "multimedia"
+      ];
+      hashedPasswordFile = config.age.secrets.antonioPass.path;
 
       # only declare common packages here
       # others: hosts/<hostname>/user-configuration.nix
@@ -35,10 +60,8 @@ in {
       ];
 
       openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICELSL45m4ptWDZwQDi2AUmCgt4n93KsmZtt69fyb0vy rexies@Zaphkiel"
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHZTLQQzgCvdaAPdxUkpytDHgwd8K1N1IWtriY4tWSvn rexies@Raphael"
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICZvsZTvR5wQedjnuSoz9p7vK7vLxCdfOdRFmbfQ7GUd rexies@Seraphine"
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFa4hzkxc5kiBZ4Tr5V4DF1StW9Am9eDzeboIKtGRt89 rexies@Persephone"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEaNh2GVxWz2zLxDa8cMnPtfYQPk1A3xlKKVuKOTNrp2 antonio@hana"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINjywfRHVDeBQBFYZym/c3JDVRwni//tSy5FPKmTgLyN antonio@hana"
       ];
     };
 
@@ -51,7 +74,7 @@ in {
       impure = {
         enable = true;
         dotsDir = "${self.paths.dots}";
-        dotsDirImpure = "/home/rexies/nixos/dots";
+        dotsDirImpure = "/home/antonio/nixos/dots";
         # skips parsing hjem.users.<>.files
         parseAttrs = [
           config.hjem.users.${username}.xdg.config.files
@@ -68,8 +91,6 @@ in {
   dandelion.dots.rexies-cli = mkDotsModule username {
     # terminal
     "git/config" = "/git/config";
-    "fish/themes" = {sources, ...}: sources.rosep-fish + "/themes";
-    "fish/config.fish" = "/fish/config.fish";
     # NOTE: required bat cache --build before theme can be used
     "bat/config" = "/bat/config";
     "bat/themes" = {sources, ...}: sources.catp-bat + "/themes";
@@ -77,6 +98,19 @@ in {
     "yazi/yazi.toml" = "/yazi/yazi.toml";
     "yazi/keymap.toml" = "/yazi/keymap.toml";
     "booru/config.toml" = "/booru/config.toml";
+
+    "fish/config.fish" = "/fish/config.fish";
+    "fish/user_variables.fish" = "/fish/user_variables.fish";
+    "fish/abbreviations.fish" = "/fish/abbreviations.fish";
+    "fish/aliases.fish" = "/fish/aliases.fish";
+    "kitty/kitty.conf" = "/kitty/kitty.conf";
+    "kitty/themes/oxocarbon.conf" = "/kitty/themes/oxocarbon.conf";
+    "menus/applications.menu" = "/menus/applications.menu";
+    "dolphinrc" = "/dolphinrc";
+    "carapace/carapace.toml" = "/carapace/carapace.toml";
+    "nushell/config.nu" = "/nushell/config.nu";
+    "nushell/env.nu" = "/nushell/env.nu";
+    "nushell/git-status.nu" = "/nushell/git-status.nu";
   };
 
   dandelion.dots.rexies-gui = mkDotsModule username {
@@ -90,15 +124,35 @@ in {
     "foot/rose-pine.ini" = {sources, ...}: sources.rosep-foot + "/rose-pine";
     "hypr/hypridle.conf" = "/hyprland/hypridle.conf";
     "gtk-4.0/settings.ini" = "/gtk/gtk4.ini";
+    "yazi/init.lua" = "/yazi/init.lua";
+    "yazi/yazi.toml" = "/yazi/yazi.toml";
+    "yazi/keymap.toml" = "/yazi/keymap.toml";
+    "yazi/package.toml" = "/yazi/package.toml";
+    "yazi/theme.toml" = "/yazi/theme.toml";
+    "yazi/flavors/oxocarbon.yazi/flavor.toml" = "/yazi/flavors/oxocarbon.yazi/flavor.toml";
+    "yazi/flavors/catppuccin-macchiato.yazi/flavor.toml" = "/yazi/flavors/catppuccin-macchiato.yazi/flavor.toml";
+    "zellij/config.kdl" = "/zellij/config.kdl";
+    "zellij/layouts/default.kdl" = "/zellij/layouts/default.kdl";
+    "zellij/layouts/nodejs.kdl" = "/zellij/layouts/nodejs.kdl";
+    "zellij/themes/catppuccin.kdl" = "/zellij/themes/catppuccin.kdl";
+    "fcitx5/conf/classicui.conf" = "/fcitx5/classicui.conf";
   };
 
   dandelion.dots.rexies-mango = mkDotsModule username {
     "mango/config.conf" = "/mango/config.conf";
     "mango/autostart.sh" = "/mango/autostart.sh";
-    "mango/hardware.conf" = d: d.dots + "/mango/${d.lib.toLower d.config.networking.hostName}.conf";
+    "mango/hardware.conf" = d: d.dotsDir + "/mango/${d.lib.toLower d.config.networking.hostName}.conf";
   };
 
   dandelion.dots.rexies-hyprland = mkDotsModule username {
     "hypr/hyprland.conf" = "/hyprland/hyprland.conf";
+  };
+  dandelion.dots.rexies-niri = mkDotsModule username {
+    "niri/config.kdl" = "/niri/config.kdl";
+    "noctalia/colors.json" = "/noctalia/colors.json";
+    "noctalia/settings.json" = "/noctalia/settings.json";
+  };
+  hj.files = {
+    ".face.icon".sources = "${../../dots/profile.png}";
   };
 }

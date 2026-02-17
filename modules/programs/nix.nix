@@ -1,5 +1,9 @@
 {nixpkgs, ...}: {
-  dandelion.modules.nix = {pkgs, ...}: let
+  dandelion.modules.nix = {
+    pkgs,
+    config,
+    ...
+  }: let
     script = pkgs.writers.writeNuBin "activate" ''
       def main [systemConfig: string] {
         let diff_closure = ${pkgs.nix}/bin/nix store diff-closures /run/current-system $systemConfig;
@@ -31,12 +35,30 @@
       channel.enable = false;
       settings = {
         allow-import-from-derivation = false;
-        experimental-features = ["nix-command" "flakes"];
+        experimental-features = [
+          "nix-command"
+          "flakes"
+        ];
         auto-optimise-store = true;
-        trusted-users = ["root" "@wheel"];
+        trusted-users = [
+          "root"
+          "@wheel"
+        ];
 
-        extra-substituters = ["https://rexielscarlet.cachix.org"];
-        extra-trusted-public-keys = ["rexielscarlet.cachix.org-1:wGoHtlmAIuGW/LgcqtFLb1RhgGZaUYGys8Okpopt3A0="];
+        extra-substituters = [
+          "https://nix-community.cachix.org"
+          "https://catppuccin.cachix.org"
+          "https://niri.cachix.org"
+          "https://cache.garnix.io"
+          "https://loneros.cachix.org"
+        ];
+        extra-trusted-public-keys = [
+          "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+          "catppuccin.cachix.org-1:noG/4HkbhJb+lUAdKrph6LaozJvAeEEZj4N732IysmU="
+          "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964="
+          "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+          "loneros.cachix.org-1:dVCECfW25sOY3PBHGBUwmQYrhRRK2+p37fVtycnedDU="
+        ];
       };
       gc = {
         persistent = true;
@@ -44,6 +66,9 @@
         dates = "weekly";
         options = "--delete-older-than 7d";
       };
+      extraOptions = ''
+        !include ${config.age.secrets.secret2.path}
+      '';
     };
     system.activationScripts.diff = ''
       if [[ -e /run/current-system ]]; then

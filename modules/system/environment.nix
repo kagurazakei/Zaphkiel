@@ -1,9 +1,16 @@
-{self, ...}: {
+{
+  self,
+  zakeivim,
+  ...
+}: {
   dandelion.modules.environment = {pkgs, ...}: {
     environment.systemPackages = [
-      self.packages.${pkgs.stdenv.hostPlatform.system}.xvim.default
+      # self.packages.${pkgs.stdenv.hostPlatform.system}.xvim.default
       pkgs.git
       pkgs.npins
+      pkgs.neovim
+      pkgs.alejandra
+      zakeivim.packages.${pkgs.stdenv.hostPlatform.system}.khanelivim
     ];
 
     environment.variables.EDITOR = "nvim";

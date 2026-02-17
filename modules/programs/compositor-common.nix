@@ -1,6 +1,7 @@
 {
   self,
   hs-todo,
+  nur,
   ...
 }: {
   dandelion.modules.compositor-common = {
@@ -14,6 +15,9 @@
     zpkgs = self.packages.${system};
     todo = hs-todo.packages.${system}.default;
   in {
+    nixpkgs.overlays = [
+      nur.overlays.default
+    ];
     # for whatever reason swappy likes to open images
     # don't let that fucker open images
     xdg.mime.defaultApplications = {
@@ -39,32 +43,73 @@
     # dependencies .w.
     environment.systemPackages = attrValues {
       # internal overlay
-      inherit (zpkgs) kokCursor kurukurubar stash mpv-wrapped;
-      inherit (zpkgs.scripts) taildrop gpurecording cowask npins-show wallcrop;
+      inherit
+        (zpkgs)
+        kokCursor
+        kurukurubar
+        stash
+        mpv-wrapped
+        viu
+        equibop
+        ;
+      inherit
+        (zpkgs.scripts)
+        taildrop
+        gpurecording
+        cowask
+        npins-show
+        wallcrop
+        ;
       # Themes
       inherit (pkgs) rose-pine-icon-theme rose-pine-gtk-theme;
-      inherit (pkgs.kdePackages) qt6ct breeze;
+      inherit (pkgs.kdePackages) breeze;
       # utility
-      inherit (pkgs) wl-clipboard grim slurp brightnessctl;
+      inherit
+        (pkgs)
+        wl-clipboard
+        grim
+        slurp
+        brightnessctl
+        ;
       inherit (pkgs) trashy fuzzel wl-screenrec;
-      inherit (pkgs) libnotify swappy imv wayfreeze networkmanagerapplet;
-      inherit (pkgs) yazi ripdrag seahorse app2unit;
-      inherit (pkgs) foot libsixel;
+      inherit
+        (pkgs)
+        libnotify
+        swappy
+        imv
+        wayfreeze
+        networkmanagerapplet
+        bottom
+        nitch
+        fastfetch
+        carapace
+        carapace-bridge
+        htop
+        ;
+      inherit
+        (pkgs)
+        yazi
+        ripdrag
+        seahorse
+        app2unit
+        komikku
+        quickshell
+        ;
+      inherit (pkgs) foot libsixel kitty;
       # external
       inherit todo;
     };
 
-    qt.enable = true;
     programs.dconf.profiles.user.databases = [
       {
         settings = {
           "org/gnome/desktop/interface" = {
-            cursor-theme = "Kokomi_Cursor";
+            cursor-theme = "Kokomi-Cursor";
             gtk-theme = "rose-pine";
             icon-theme = "rose-pine";
-            document-font-name = "DejaVu Serif";
-            font-name = "DejaVu Sans";
-            monospace-font-name = "CaskaydiaMono NF";
+            document-font-name = "JetBrainsMono Nerd Font";
+            font-name = "JetBrainsMono Nerd Font";
+            monospace-font-name = "JetBrainsMono Nerd Font";
             accent-color = "purple";
             color-scheme = "prefer-dark";
           };

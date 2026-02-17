@@ -21,11 +21,12 @@
       inherit
         (pkgs.vimPlugins)
         lz-n
-        blink-cmp
+        blink-cmp-nixpkgs-maintainers
         nvim-web-devicons
         lspkind-nvim
         oil-nvim
         mini-align
+        mini-cursorword
         ;
 
       treesitter = let
