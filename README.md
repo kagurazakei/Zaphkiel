@@ -1,8 +1,11 @@
 # My NixOS Configuration ( Stolen From Zaphkiel )
 # Heavily Unstable and Under heavy Development state 
 
-https://github.com/kagurazakei/Zaphkiel/tree/master/.github/screenshots/niri-1.png 
-https://github.com/kagurazakei/Zaphkiel/tree/master/.github/screenshots/niri-2.png 
+<div align="center">
+  <img src="./.github/screenshots/niri-1.png" width="30%" alt="Niri Overview"/>
+  <img src="./.github/screenshots/niri-2.png" width="30%" alt="Niri Rice"/>
+</div>
+
 
 - Wallpaper: [The Herta by meirong][wallpaper]
 - [Installation Guide][install guide]
