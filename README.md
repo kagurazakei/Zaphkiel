@@ -1,6 +1,8 @@
-# My NixOS Configuration
+# My NixOS Configuration ( Stolen From Zaphkiel )
+# Heavily Unstable and Under heavy Development state 
 
-https://github.com/user-attachments/assets/d11e9823-eb62-470c-9f0d-cb175bb60cbc
+https://github.com/kagurazakei/Zaphkiel/tree/master/.github/screenshots/niri-1.png 
+https://github.com/kagurazakei/Zaphkiel/tree/master/.github/screenshots/niri-2.png 
 
 - Wallpaper: [The Herta by meirong][wallpaper]
 - [Installation Guide][install guide]
@@ -9,12 +11,12 @@ https://github.com/user-attachments/assets/d11e9823-eb62-470c-9f0d-cb175bb60cbc
 
 | Component | Software | Configuration |
 | --------- | -------- | ------------- |
-|KuruKuruBar|[Quickshell]|[`dots/quickshell/kurukurubar`][kurudots]|
-|Compositor|[MangoWC]|[`dots/mango`][mangodots]|
+|noctalia|[Quickshell]|[`dots/noctalia/`][noctaliadots]|
+|Compositor|[Niri]|[`dots/niri`][niridots]|
 |Launcher|[Fuzzel]|[`dots/fuzzel`][fuzldots]|
 |Colors|[Matugen]|[`nixosModules/external/matugen/templates/`][mtgndots]|
 |Terminal|[foot]|[`dots/foot/foot.ini`][footdots]|
-|Editor|[Neovim]|[`dots/nvim/`][nvimdots]|
+|Editor|[kitty]|[`dots/kitty/`][kittydots]|
 |Wallpapers|[booru-hs]|[`dots/booru/preview.md`][booru images]|
 |Cursor|[Kokomi Cursor][kokcursor]| nil / really long random text to make this table very wide yes looks like I|
 

@@ -90,7 +90,6 @@ in {
 
   dandelion.dots.rexies-cli = mkDotsModule username {
     # terminal
-    "git/config" = "/git/config";
     # NOTE: required bat cache --build before theme can be used
     "bat/config" = "/bat/config";
     "bat/themes" = {sources, ...}: sources.catp-bat + "/themes";
