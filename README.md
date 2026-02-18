@@ -14,12 +14,12 @@
 
 | Component  | Software                   | Configuration                                                               |
 | ---------- | -------------------------- | --------------------------------------------------------------------------- |
-| noctalia   | [Quickshell]               | [`dots/noctalia/`][noctaliadots]                                            |
+| noctalia   | [Quickshell]               | [`dots/noctalia`][noctaliadots]                                             |
 | Compositor | [Niri]                     | [`dots/niri`][niridots]                                                     |
 | Launcher   | [Fuzzel]                   | [`dots/fuzzel`][fuzldots]                                                   |
 | Colors     | [Matugen]                  | [`nixosModules/external/matugen/templates/`][mtgndots]                      |
 | Terminal   | [foot]                     | [`dots/foot/foot.ini`][footdots]                                            |
-| Editor     | [kitty]                    | [`dots/kitty/`][kittydots]                                                  |
+| Editor     | [kitty]                    | [`dots/kitty`][kittydots]                                                   |
 | Wallpapers | [booru-hs]                 | [`dots/booru/preview.md`][booru images]                                     |
 | Cursor     | [Kokomi Cursor][kokcursor] | nil / really long random text to make this table very wide yes looks like I |
 
@@ -28,7 +28,8 @@
 - last revision where Zaphkiel was an npins based config [fc91df912][npins-rev]
 - ~~Last revision where Zaphkiel was flake based~~ pre-npins flake config
   [0eee46d1e][flake-rev]
-- ~~fix sddm weird eval input errors check [`modules/nixosConfiguration.nix`][hostConfig]~~ pre-npins flake config
+- ~~fix sddm weird eval input errors check~~
+  [`modules/nixosConfiguration.nix`][hostConfig]
 
 ## What in the nix is going on here?
 
