@@ -14,7 +14,6 @@ let
     nixosSystem {
       specialArgs = {
         inherit self nixpkgs inputs;
-        users = [ "antonio" ];
         username = "antonio";
       };
       modules = [ self.azalea.hosts.${hostName} ];
