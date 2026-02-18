@@ -1,10 +1,9 @@
-{ shizuruPkgs, ... }:
 {
   azalea.modules.boot =
-    { pkgs, ... }:
+    { pkgs, sources, ... }:
     {
       environment.systemPackages = [
-        shizuruPkgs.packages.${pkgs.stdenv.hostPlatform.system}.kureiji-ollie-cursors
+        (pkgs.callPackage "${sources.shizuruPkgs}/pkgs/default.nix" { }).kureiji-ollie-cursors
       ];
       boot = {
         consoleLogLevel = 0;
@@ -32,7 +31,9 @@
         };
         plymouth = {
           enable = true;
-          themePackages = [ shizuruPkgs.packages.${pkgs.stdenv.hostPlatform.system}.cat-plymouth ];
+          themePackages = [
+            (pkgs.callPackage "${sources.shizuruPkgs}/pkgs/default.nix" { }).cat-plymouth
+          ];
           theme = "catppuccin-mocha-mod";
         };
       };

@@ -1,7 +1,9 @@
-{waifu-cursors, ...}: {
-  azalea.modules.cursors = {pkgs, ...}: {
-    environment.systemPackages = [
-      waifu-cursors.packages.${pkgs.stdenv.hostPlatform.system}.all
-    ];
-  };
+{
+  azalea.modules.cursors =
+    { pkgs, sources, ... }:
+    {
+      environment.systemPackages = [
+        (pkgs.callPackage "${sources.waifu-cursors}/default.nix" { }).default
+      ];
+    };
 }

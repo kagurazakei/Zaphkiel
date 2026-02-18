@@ -16,6 +16,19 @@
       "url": "https://api.github.com/repos/Xpl0itU/WiiUDownloader/tarball/v2.69",
       "hash": "sha256-9Z/HUGcBJ6AKaEpfEcHLHJ21h+bJsu9eyoPjTCdGqe8="
     },
+    "agenix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ryantm",
+        "repo": "agenix"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "b027ee29d959fda4b60b57566d64c98a202e0feb",
+      "url": "https://github.com/ryantm/agenix/archive/b027ee29d959fda4b60b57566d64c98a202e0feb.tar.gz",
+      "hash": "sha256-9VnK6Oqai65puVJ4WYtCTvlJeXxMzAp/69HhQuTdl/I="
+    },
     "ayugram-desktop": {
       "type": "Git",
       "repository": {
@@ -80,6 +93,19 @@
       "revision": "446a8a5cc7a3eae3185ee0c697732c32a5547a0b",
       "url": "https://github.com/3rd/image.nvim/archive/446a8a5cc7a3eae3185ee0c697732c32a5547a0b.tar.gz",
       "hash": "sha256-EaDeY8aP41xHTw5epqYjaBqPYs6Z2DABzSaVOnG6D6I="
+    },
+    "khanelivim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "kagurazakei",
+        "repo": "khanelivim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "67cc29028c7377fa3ffca69471b678f11cb245a8",
+      "url": "https://github.com/kagurazakei/khanelivim/archive/67cc29028c7377fa3ffca69471b678f11cb245a8.tar.gz",
+      "hash": "sha256-LxPEJql4dXWe02p8sZLuPsEIBSxPMbSYHnWymooQ4Lw="
     },
     "mangowc": {
       "type": "GitRelease",
@@ -162,6 +188,19 @@
       "url": "https://github.com/rose-pine/foot/archive/725e9c38880d577ee973eb916e83395964ffc287.tar.gz",
       "hash": "sha256-Lo8HkJr+uYNUSRNzUhaksJAPvK8fbu5WubtmBSsa0/Q="
     },
+    "shizuruPkgs": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "kagurazakei",
+        "repo": "shizuruPkgs"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "fc1232e4d60b34b52addb7f20e3fe689c5d7451e",
+      "url": "https://github.com/kagurazakei/shizuruPkgs/archive/fc1232e4d60b34b52addb7f20e3fe689c5d7451e.tar.gz",
+      "hash": "sha256-6bL54LqB9oCjgO6S0BUYEGV3DCp6veSOKaYUfS+Wuoo="
+    },
     "viu": {
       "type": "Git",
       "repository": {
@@ -174,6 +213,19 @@
       "revision": "70e1445650252c742b3e2c5c3b35981dbc3c31a8",
       "url": "https://github.com/viu-media/viu/archive/70e1445650252c742b3e2c5c3b35981dbc3c31a8.tar.gz",
       "hash": "sha256-fnFuFnNZdly14hcnQP9CY3gPcFyYVE7xa19jt64jtvA="
+    },
+    "waifu-cursors": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "kagurazakei",
+        "repo": "waifu-cursors"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "3625d29ac6f165ac45a44a6e6bf5ab3366e83a6e",
+      "url": "https://github.com/kagurazakei/waifu-cursors/archive/3625d29ac6f165ac45a44a6e6bf5ab3366e83a6e.tar.gz",
+      "hash": "sha256-/Yfw++s7T/iADOmUh2xIh6lt+PyAKpW1HM6z+uBos3w="
     },
     "zaphkiel": {
       "type": "Git",

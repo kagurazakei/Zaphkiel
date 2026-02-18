@@ -21,6 +21,7 @@
     impermanence.url = "github:nix-community/impermanence";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     silent-sddm.url = "github:kagurazakei/SilentSDDM";
+    zakeivim.url = "github:kagurazakei/khanelivim";
     niri.url = "github:kagurazakei/niri";
     nur = {
       url = "github:nix-community/NUR";
@@ -34,12 +35,9 @@
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
     };
-    shizuruPkgs.url = "github:kagurazakei/shizuruPkgs";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     firefox.url = "github:nix-community/flake-firefox-nightly";
-    waifu-cursors.url = "github:kagurazakei/waifu-cursors";
     mnw.url = "github:Gerg-L/mnw";
-    zakeivim.url = "github:kagurazakei/khanelivim";
     nixos-wsl = {
       url = "github:nix-community/nixos-wsl";
       inputs.nixpkgs.follows = "nixpkgs";
