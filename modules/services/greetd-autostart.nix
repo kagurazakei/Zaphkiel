@@ -1,16 +1,18 @@
 {
-  dandelion.modules.greetd-autostart = {
+  azalea.modules.greetd-autostart = {
     services.greetd = {
       enable = true;
-      settings = let
-        initial_session = {
-          command = "uwsm start niri-uwsm.desktop";
-          user = "antonio";
+      settings =
+        let
+          initial_session = {
+            command = "uwsm start niri-uwsm.desktop";
+            user = "antonio";
+          };
+        in
+        {
+          inherit initial_session;
+          default_session = initial_session;
         };
-      in {
-        inherit initial_session;
-        default_session = initial_session;
-      };
     };
   };
 }

@@ -1,5 +1,5 @@
 {
-  dandelion.modules.direnv = {
+  azalea.modules.direnv = {
     programs.direnv = {
       enable = true;
       silent = true;

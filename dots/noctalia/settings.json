@@ -498,19 +498,19 @@
     },
     "notifications": {
         "backgroundOpacity": 1,
-        "criticalUrgencyDuration": 15,
+        "criticalUrgencyDuration": 1,
         "density": "default",
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
         "enableMediaToast": false,
         "enabled": true,
         "location": "top",
-        "lowUrgencyDuration": 3,
+        "lowUrgencyDuration": 1,
         "monitors": [
             "HDMI-A-1",
             "eDP-1"
         ],
-        "normalUrgencyDuration": 8,
+        "normalUrgencyDuration": 1,
         "overlayLayer": true,
         "respectExpireTimeout": false,
         "saveToHistory": {

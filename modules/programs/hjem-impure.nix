@@ -1,5 +1,5 @@
 {hjem-impure, ...}: {
-  dandelion.modules.hjem-impure = {pkgs, ...}: {
+  azalea.modules.hjem-impure = {pkgs, ...}: {
     hjem.extraModules = [hjem-impure.hjemModules.default];
     hj = {
       systemd.services = {

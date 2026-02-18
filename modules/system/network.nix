@@ -1,5 +1,5 @@
 {
-  dandelion.modules.network = {
+  azalea.modules.network = {
     networking = {
       nftables.enable = true;
       networkmanager = {
@@ -12,8 +12,8 @@
 
       firewall = {
         enable = true;
-        allowedTCPPortRanges = [];
-        allowedUDPPortRanges = [];
+        allowedTCPPortRanges = [ ];
+        allowedUDPPortRanges = [ ];
       };
     };
   };

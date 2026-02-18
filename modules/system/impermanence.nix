@@ -1,6 +1,6 @@
 { impermanence, ... }:
 {
-  dandelion.modules.impermanence = {
+  azalea.modules.impermanence = {
 
     imports = [
       impermanence.nixosModules.impermanence

@@ -1,5 +1,5 @@
 {
-  dandelion.modules.proton = {pkgs, ...}: {
+  azalea.modules.proton = {pkgs, ...}: {
     environment.sessionVariables = {
       "PROTON_ENABLE_WAYLAND" = 1;
       "PROTON_USE_WOW64" = 1;

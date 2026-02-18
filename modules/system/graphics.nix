@@ -1,5 +1,5 @@
 {
-  dandelion.modules.graphics = {
+  azalea.modules.graphics = {
     hardware.graphics = {
       enable = true;
       enable32Bit = true;

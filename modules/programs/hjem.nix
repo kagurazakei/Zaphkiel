@@ -1,5 +1,5 @@
 {hjem, ...}: {
-  dandelion.modules.hjem = {
+  azalea.modules.hjem = {
     pkgs,
     lib,
     ...

@@ -1,5 +1,5 @@
 {
-  dandelion.modules.obs-studio = {pkgs, ...}: {
+  azalea.modules.obs-studio = {pkgs, ...}: {
     programs.obs-studio = {
       enable = true;
       enableVirtualCamera = true;

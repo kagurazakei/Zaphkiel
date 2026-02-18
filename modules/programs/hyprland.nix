@@ -1,5 +1,5 @@
 {
-  dandelion.modules.hyprland = {
+  azalea.modules.hyprland = {
     pkgs,
     lib,
     config,

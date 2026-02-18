@@ -1,5 +1,5 @@
 {
-  dandelion.modules.privoxy = {
+  azalea.modules.privoxy = {
     lib,
     config,
     ...

@@ -1,9 +1,9 @@
 {self, ...}: {
-  dandelion.modules.hjem-matugen = {
-    hjem.extraModules = [self.dandelion.modules._hjem-matugen];
+  azalea.modules.hjem-matugen = {
+    hjem.extraModules = [self.azalea.modules._hjem-matugen];
   };
 
-  dandelion.modules._hjem-matugen = {
+  azalea.modules._hjem-matugen = {
     pkgs,
     config,
     osConfig,

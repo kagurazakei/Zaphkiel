@@ -1,5 +1,5 @@
 {
-  dandelion.modules.shpool = {
+  azalea.modules.shpool = {
     pkgs,
     lib,
     config,

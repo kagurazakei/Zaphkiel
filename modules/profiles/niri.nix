@@ -1,11 +1,11 @@
 { self, ... }:
 {
-  dandelion.profiles.niri = {
+  azalea.profiles.niri = {
     imports = [
-      self.dandelion.modules.niri
-      self.dandelion.modules.noctalia
-      self.dandelion.modules.compositor-common
-      self.dandelion.modules.qt
+      self.azalea.modules.niri
+      self.azalea.modules.noctalia
+      self.azalea.modules.compositor-common
+      self.azalea.modules.qt
     ];
   };
 }

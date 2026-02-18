@@ -1,6 +1,6 @@
 # primary reference https://gitlab.com/fazzi/nixohess/-/blob/main/modules/gaming/default.nix
 {
-  dandelion.modules.wine = {
+  azalea.modules.wine = {
     pkgs,
     lib,
     config,

@@ -1,5 +1,5 @@
 {self, ...}: {
-  dandelion.modules.mangowc = {
+  azalea.modules.mangowc = {
     config,
     lib,
     pkgs,

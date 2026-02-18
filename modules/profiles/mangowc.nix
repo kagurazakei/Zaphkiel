@@ -1,8 +1,9 @@
-{self, ...}: {
-  dandelion.profiles.mangowc = {
+{ self, ... }:
+{
+  azalea.profiles.mangowc = {
     imports = [
-      self.dandelion.modules.mangowc
-      self.dandelion.modules.compositor-common
+      self.azalea.modules.mangowc
+      self.azalea.modules.compositor-common
     ];
   };
 }

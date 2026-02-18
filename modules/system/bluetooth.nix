@@ -1,5 +1,5 @@
 {
-  dandelion.modules.bluetooth = {
+  azalea.modules.bluetooth = {
     hardware.bluetooth = {
       enable = true;
       powerOnBoot = true;

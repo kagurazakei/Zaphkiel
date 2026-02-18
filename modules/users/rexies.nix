@@ -1,98 +1,102 @@
-{self, ...}: let
+{ self, ... }:
+let
   inherit (self.lib) mkDotsModule;
   username = "antonio";
-in {
-  dandelion.users.rexies = {
-    pkgs,
-    config,
-    lib,
-    ...
-  }: {
-    imports = [
-      (lib.mkAliasOptionModule ["hj"] ["hjem" "users" "${username}"])
-    ];
-    zaphkiel = {
-      data.users = [username];
-      secrets = {
-        antonioPass = {
-          file = self.paths.secrets + /secret1.age;
-          owner = username;
-        };
-        secret2 = {
-          file = ../../secrets/secret2.age;
-          owner = "antonio";
-          mode = "0500";
-          path = "/etc/nix/nix-access-token.conf";
-        };
-        recovery = {
-          file = ../../secrets/recovery.age;
-          owner = "root";
-          path = "/home/${username}/.config/keys/recovery.txt";
-        };
-        anilist = {
-          file = ../../secrets/anilist.age;
-          owner = "antonio";
-          path = "/home/${username}/.config/keys/anilist.txt";
+in
+{
+  azalea.users.rexies =
+    {
+      pkgs,
+      config,
+      lib,
+      ...
+    }:
+    {
+      imports = [
+        (lib.mkAliasOptionModule [ "hj" ] [ "hjem" "users" "${username}" ])
+      ];
+      zaphkiel = {
+        data.users = [ username ];
+        secrets = {
+          antonioPass = {
+            file = self.paths.secrets + /secret1.age;
+            owner = username;
+          };
+          secret2 = {
+            file = ../../secrets/secret2.age;
+            owner = "antonio";
+            mode = "0500";
+            path = "/etc/nix/nix-access-token.conf";
+          };
+          recovery = {
+            file = ../../secrets/recovery.age;
+            owner = "root";
+            path = "/home/${username}/.config/keys/recovery.txt";
+          };
+          anilist = {
+            file = ../../secrets/anilist.age;
+            owner = "antonio";
+            path = "/home/${username}/.config/keys/anilist.txt";
+          };
         };
       };
-    };
 
-    users.users.${username} = {
-      description = "Kagurazakei";
-      shell = pkgs.fish;
-      isNormalUser = true;
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-        "multimedia"
-      ];
-      hashedPasswordFile = config.age.secrets.antonioPass.path;
+      users.users.${username} = {
+        description = "Kagurazakei";
+        shell = pkgs.fish;
+        isNormalUser = true;
+        extraGroups = [
+          "networkmanager"
+          "wheel"
+          "multimedia"
+        ];
+        hashedPasswordFile = config.age.secrets.antonioPass.path;
 
-      # only declare common packages here
-      # others: hosts/<hostname>/user-configuration.nix
-      # if you declare something here that isn't common to literally every host I
-      # will personally show up under your bed whoever and wherever you are
-      packages = [
-        pkgs.btop
-        pkgs.git
-        pkgs.bat
-        pkgs.delta
-      ];
+        # only declare common packages here
+        # others: hosts/<hostname>/user-configuration.nix
+        # if you declare something here that isn't common to literally every host I
+        # will personally show up under your bed whoever and wherever you are
+        packages = [
+          pkgs.btop
+          pkgs.git
+          pkgs.bat
+          pkgs.delta
+        ];
 
-      openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEaNh2GVxWz2zLxDa8cMnPtfYQPk1A3xlKKVuKOTNrp2 antonio@hana"
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINjywfRHVDeBQBFYZym/c3JDVRwni//tSy5FPKmTgLyN antonio@hana"
-      ];
-    };
-
-    hjem.users.${username} = {
-      enable = true;
-      user = username;
-      directory = config.users.users.${username}.home;
-      clobberFiles = lib.mkForce true;
-
-      impure = {
-        enable = true;
-        dotsDir = "${self.paths.dots}";
-        dotsDirImpure = "/home/antonio/nixos/dots";
-        # skips parsing hjem.users.<>.files
-        parseAttrs = [
-          config.hjem.users.${username}.xdg.config.files
-          config.hjem.users.${username}.xdg.state.files
+        openssh.authorizedKeys.keys = [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEaNh2GVxWz2zLxDa8cMnPtfYQPk1A3xlKKVuKOTNrp2 antonio@hana"
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINjywfRHVDeBQBFYZym/c3JDVRwni//tSy5FPKmTgLyN antonio@hana"
         ];
       };
+
+      hjem.users.${username} = {
+        enable = true;
+        user = username;
+        directory = config.users.users.${username}.home;
+        clobberFiles = lib.mkForce true;
+
+        impure = {
+          enable = true;
+          dotsDir = "${self.paths.dots}";
+          dotsDirImpure = "/home/antonio/nixos/dots";
+          # skips parsing hjem.users.<>.files
+          parseAttrs = [
+            config.hjem.users.${username}.xdg.config.files
+            config.hjem.users.${username}.xdg.state.files
+          ];
+        };
+      };
     };
-  };
 
   # being able to nix freely
   # I have spawned horrors upon this world
   # nix beginners, I am sorry
 
-  dandelion.dots.rexies-cli = mkDotsModule username {
+  azalea.dots.rexies-cli = mkDotsModule username {
     # terminal
     # NOTE: required bat cache --build before theme can be used
     "bat/config" = "/bat/config";
-    "bat/themes" = {sources, ...}: sources.catp-bat + "/themes";
+    "bat/themes" = { sources, ... }: sources.catp-bat + "/themes";
     "shpool/config.toml" = "/shpool/config.toml";
     "yazi/yazi.toml" = "/yazi/yazi.toml";
     "yazi/keymap.toml" = "/yazi/keymap.toml";
@@ -112,15 +116,15 @@ in {
     "nushell/git-status.nu" = "/nushell/git-status.nu";
   };
 
-  dandelion.dots.rexies-gui = mkDotsModule username {
+  azalea.dots.rexies-gui = mkDotsModule username {
     "uwsm/env" = "/uwsm/env";
     "qt6ct/qt6ct.conf" = "/qt6ct/qt6ct.conf";
-    "background" = {config, ...}: config.zaphkiel.data.wallpaper;
+    "background" = { config, ... }: config.zaphkiel.data.wallpaper;
     "matugen/config.toml" = "/matugen/config.toml";
     "matugen/templates" = "/matugen/templates";
     "fuzzel/fuzzel.ini" = "/fuzzel/fuzzel.ini";
     "foot/foot.ini" = "/foot/foot.ini";
-    "foot/rose-pine.ini" = {sources, ...}: sources.rosep-foot + "/rose-pine";
+    "foot/rose-pine.ini" = { sources, ... }: sources.rosep-foot + "/rose-pine";
     "hypr/hypridle.conf" = "/hyprland/hypridle.conf";
     "gtk-4.0/settings.ini" = "/gtk/gtk4.ini";
     "yazi/init.lua" = "/yazi/init.lua";
@@ -129,7 +133,8 @@ in {
     "yazi/package.toml" = "/yazi/package.toml";
     "yazi/theme.toml" = "/yazi/theme.toml";
     "yazi/flavors/oxocarbon.yazi/flavor.toml" = "/yazi/flavors/oxocarbon.yazi/flavor.toml";
-    "yazi/flavors/catppuccin-macchiato.yazi/flavor.toml" = "/yazi/flavors/catppuccin-macchiato.yazi/flavor.toml";
+    "yazi/flavors/catppuccin-macchiato.yazi/flavor.toml" =
+      "/yazi/flavors/catppuccin-macchiato.yazi/flavor.toml";
     "zellij/config.kdl" = "/zellij/config.kdl";
     "zellij/layouts/default.kdl" = "/zellij/layouts/default.kdl";
     "zellij/layouts/nodejs.kdl" = "/zellij/layouts/nodejs.kdl";
@@ -137,16 +142,16 @@ in {
     "fcitx5/conf/classicui.conf" = "/fcitx5/classicui.conf";
   };
 
-  dandelion.dots.rexies-mango = mkDotsModule username {
+  azalea.dots.rexies-mango = mkDotsModule username {
     "mango/config.conf" = "/mango/config.conf";
     "mango/autostart.sh" = "/mango/autostart.sh";
     "mango/hardware.conf" = d: d.dotsDir + "/mango/${d.lib.toLower d.config.networking.hostName}.conf";
   };
 
-  dandelion.dots.rexies-hyprland = mkDotsModule username {
+  azalea.dots.rexies-hyprland = mkDotsModule username {
     "hypr/hyprland.conf" = "/hyprland/hyprland.conf";
   };
-  dandelion.dots.rexies-niri = mkDotsModule username {
+  azalea.dots.rexies-niri = mkDotsModule username {
     "niri/config.kdl" = "/niri/config.kdl";
     "noctalia/colors.json" = "/noctalia/colors.json";
     "noctalia/settings.json" = "/noctalia/settings.json";

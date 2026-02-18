@@ -1,5 +1,5 @@
 {
-  dandelion.modules.firefox = {pkgs, ...}: {
+  azalea.modules.firefox = {pkgs, ...}: {
     programs.firefox = {
       package = pkgs.librewolf;
       enable = true;

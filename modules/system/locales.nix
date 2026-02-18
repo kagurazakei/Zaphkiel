@@ -1,5 +1,5 @@
 {
-  dandelion.modules.locales =
+  azalea.modules.locales =
     { lib, ... }:
     {
       # Set your time zone.

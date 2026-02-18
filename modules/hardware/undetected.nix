@@ -1,5 +1,7 @@
 {
-  dandelion.modules.undetected = {modulesPath, ...}: {
-    imports = [(modulesPath + "/installer/scan/not-detected.nix")];
-  };
+  azalea.modules.undetected =
+    { modulesPath, ... }:
+    {
+      imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+    };
 }

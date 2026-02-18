@@ -1,12 +1,14 @@
 {
-  description = "Rexiel Scarlet's Flake";
+  description = "kagurazakei's Flake";
 
-  # I might have just made reading my flake a hellscape
-  # Presenting, the *Dandelion* setup
-  outputs = {...} @ inputs: let
-    dandelion = import ./dandelion.nix inputs;
-    inherit (dandelion) importModules recursiveImport;
-  in
+  # This is the completely stolen from Rexcrazy804/Zaphkiel(dandelion)
+  # Presenting, the *azalea* setup
+  outputs =
+    { ... }@inputs:
+    let
+      azalea = import ./azalea.nix inputs;
+      inherit (azalea) importModules recursiveImport;
+    in
     importModules [
       (recursiveImport ./modules)
     ];
@@ -27,6 +29,9 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
     };
     shizuruPkgs.url = "github:kagurazakei/shizuruPkgs";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";

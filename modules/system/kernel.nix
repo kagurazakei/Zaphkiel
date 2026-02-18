@@ -1,6 +1,6 @@
 { nix-cachyos-kernel, ... }:
 {
-  dandelion.modules.kernel =
+  azalea.modules.kernel =
     { pkgs, ... }:
     {
 

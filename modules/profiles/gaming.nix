@@ -1,10 +1,11 @@
-{self, ...}: {
-  dandelion.profiles.gaming = {
+{ self, ... }:
+{
+  azalea.profiles.gaming = {
     imports = [
-      self.dandelion.modules.wine
-      self.dandelion.modules.proton
-      self.dandelion.modules.sunshine
-      self.dandelion.modules.hjem-games
+      self.azalea.modules.wine
+      self.azalea.modules.proton
+      self.azalea.modules.sunshine
+      self.azalea.modules.hjem-games
     ];
   };
 }

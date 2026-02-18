@@ -1,5 +1,5 @@
 {noctalia, ...}: {
-  dandelion.modules.noctalia = {pkgs, ...}: {
+  azalea.modules.noctalia = {pkgs, ...}: {
     hj = {
       packages = [noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default];
       systemd.services = {

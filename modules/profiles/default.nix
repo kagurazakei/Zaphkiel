@@ -1,31 +1,32 @@
-{self, ...}: {
-  dandelion.profiles.default = {
+{ self, ... }:
+{
+  azalea.profiles.default = {
     imports = [
-      self.dandelion.modules.agenix
-      self.dandelion.modules.hjem
-      self.dandelion.modules.hjem-impure
-      self.dandelion.modules.hjem-matugen
-      self.dandelion.modules.zaphkiel-data
-      self.dandelion.modules.locales
-      self.dandelion.modules.impermanence
-      self.dandelion.modules.boot
-      self.dandelion.modules.kernel
-      self.dandelion.modules.security
-      self.dandelion.modules.flatpak
-      self.dandelion.modules.scheduler
-      self.dandelion.modules.input
+      self.azalea.modules.agenix
+      self.azalea.modules.hjem
+      self.azalea.modules.hjem-impure
+      self.azalea.modules.hjem-matugen
+      self.azalea.modules.zaphkiel-data
+      self.azalea.modules.locales
+      self.azalea.modules.impermanence
+      self.azalea.modules.boot
+      self.azalea.modules.kernel
+      self.azalea.modules.security
+      self.azalea.modules.flatpak
+      self.azalea.modules.scheduler
+      self.azalea.modules.input
       # programs
-      self.dandelion.modules.environment
-      self.dandelion.modules.nix
-      self.dandelion.modules.fish
-      self.dandelion.modules.direnv
-      # self.dandelion.modules.shpool
+      self.azalea.modules.environment
+      self.azalea.modules.nix
+      self.azalea.modules.fish
+      self.azalea.modules.direnv
+      # self.azalea.modules.shpool
       # network
-      # self.dandelion.modules.dnscrypt
-      # self.dandelion.modules.tailscale
-      # self.dandelion.modules.openssh
+      # self.azalea.modules.dnscrypt
+      # self.azalea.modules.tailscale
+      # self.azalea.modules.openssh
       # hardware
-      self.dandelion.modules.undetected
+      self.azalea.modules.undetected
     ];
   };
 }

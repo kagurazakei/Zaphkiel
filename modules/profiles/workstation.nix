@@ -1,17 +1,17 @@
 { self, ... }:
 {
-  dandelion.profiles.workstation = {
+  azalea.profiles.workstation = {
     imports = [
-      self.dandelion.modules.firefox
-      # self.dandelion.modules.keyd
-      self.dandelion.modules.gnupg
-      self.dandelion.modules.audio
-      self.dandelion.modules.fonts
-      self.dandelion.modules.firmware
-      self.dandelion.modules.bluetooth
-      self.dandelion.modules.network
-      self.dandelion.modules.graphics
-      # self.dandelion.modules.privoxy
+      self.azalea.modules.firefox
+      # self.azalea.modules.keyd
+      self.azalea.modules.gnupg
+      self.azalea.modules.audio
+      self.azalea.modules.fonts
+      self.azalea.modules.firmware
+      self.azalea.modules.bluetooth
+      self.azalea.modules.network
+      self.azalea.modules.graphics
+      # self.azalea.modules.privoxy
     ];
   };
 }

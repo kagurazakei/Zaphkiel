@@ -1,6 +1,6 @@
 {
-  dandelion.modules.adb = {
+  azalea.modules.adb = {
     programs.adb.enable = true;
-    users.users.rexies.extraGroups = ["adbusers" "kvm"];
+    users.users.antonio.extraGroups = ["adbusers" "kvm"];
   };
 }

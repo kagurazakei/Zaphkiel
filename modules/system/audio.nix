@@ -1,5 +1,5 @@
 {
-  dandelion.modules.audio = {
+  azalea.modules.audio = {
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {

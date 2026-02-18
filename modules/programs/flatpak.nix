@@ -1,5 +1,5 @@
 {nix-flatpak, ...}: {
-  dandelion.modules.flatpak = {...}: {
+  azalea.modules.flatpak = {...}: {
     imports = [
       nix-flatpak.nixosModules.nix-flatpak
     ];

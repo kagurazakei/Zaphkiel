@@ -2,7 +2,7 @@
   # NOTE
   # not really using this which is why the weird @inputs
   # to excape eval errors using laziness
-  dandelion.modules.silent-sddm = {pkgs, ...}: {
+  azalea.modules.silent-sddm = {pkgs, ...}: {
     imports = [inputs.silent-sddm.nixosModules.default];
     programs.silentSDDM = {
       enable = true;

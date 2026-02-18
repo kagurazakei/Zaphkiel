@@ -1,5 +1,5 @@
 {
-  dandelion.modules.sunshine = {
+  azalea.modules.sunshine = {
     services.sunshine = {
       enable = true;
       autoStart = false;

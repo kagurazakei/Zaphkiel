@@ -16,6 +16,19 @@
       "url": "https://api.github.com/repos/Xpl0itU/WiiUDownloader/tarball/v2.69",
       "hash": "sha256-9Z/HUGcBJ6AKaEpfEcHLHJ21h+bJsu9eyoPjTCdGqe8="
     },
+    "ayugram-desktop": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ndfined-crp",
+        "repo": "ayugram-desktop"
+      },
+      "branch": "release",
+      "submodules": false,
+      "revision": "a95081b8ac098e529aedad2de68464e312d724dc",
+      "url": "https://github.com/ndfined-crp/ayugram-desktop/archive/a95081b8ac098e529aedad2de68464e312d724dc.tar.gz",
+      "hash": "sha256-MRRHMf2wGeotG26qBJ9+tzjWWdEJFjaui+La2o5Lx7c="
+    },
     "catp-bat": {
       "type": "Git",
       "repository": {
