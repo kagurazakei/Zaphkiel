@@ -1,8 +1,11 @@
+# ╭──────────────────────────────────────────────────────────╮
+# │ add inputs as specialargs for using silent-sddm weid error                                                          │
+# ╰──────────────────────────────────────────────────────────╯
 {
   nixpkgs,
   self,
   ...
-}:
+}@inputs:
 let
   inherit (nixpkgs.lib) genAttrs nixosSystem attrNames;
 
@@ -10,7 +13,7 @@ let
     hostName:
     nixosSystem {
       specialArgs = {
-        inherit self nixpkgs;
+        inherit self nixpkgs inputs;
         users = [ "antonio" ];
         username = "antonio";
       };

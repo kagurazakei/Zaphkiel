@@ -81,25 +81,25 @@
     "aquamarine_2": {
       "inputs": {
         "hyprutils": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "systems"
@@ -538,7 +538,7 @@
     "gitignore_2": {
       "inputs": {
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "pre-commit-hooks",
@@ -700,19 +700,19 @@
     "hyprcursor_2": {
       "inputs": {
         "hyprlang": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprlang"
         ],
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "systems"
@@ -767,19 +767,19 @@
     "hyprgraphics_2": {
       "inputs": {
         "hyprutils": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "systems"
@@ -861,13 +861,13 @@
     "hyprland-protocols_2": {
       "inputs": {
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "systems"
@@ -925,21 +925,21 @@
     "hyprland-qt-support_2": {
       "inputs": {
         "hyprlang": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprland-qtutils",
           "hyprlang"
         ],
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprland-qtutils",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprland-qtutils",
@@ -1004,13 +1004,13 @@
       "inputs": {
         "hyprland-qt-support": "hyprland-qt-support_2",
         "hyprlang": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprland-qtutils",
@@ -1018,13 +1018,13 @@
           "hyprutils"
         ],
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "systems"
@@ -1055,7 +1055,7 @@
         "hyprutils": "hyprutils_2",
         "hyprwayland-scanner": "hyprwayland-scanner_2",
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "nixpkgs"
         ],
@@ -1112,19 +1112,19 @@
     "hyprlang_2": {
       "inputs": {
         "hyprutils": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "systems"
@@ -1174,13 +1174,13 @@
     "hyprutils_2": {
       "inputs": {
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "systems"
@@ -1230,13 +1230,13 @@
     "hyprwayland-scanner_2": {
       "inputs": {
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "systems"
@@ -1935,7 +1935,7 @@
         "flake-compat": "flake-compat_5",
         "gitignore": "gitignore_2",
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
@@ -1977,7 +1977,7 @@
         "nur": "nur",
         "nur-repo-override": "nur-repo-override",
         "shizuruPkgs": "shizuruPkgs",
-        "silentSDDM": "silentSDDM",
+        "silent-sddm": "silent-sddm",
         "stash": "stash",
         "systems": "systems_6",
         "waifu-cursors": "waifu-cursors",
@@ -2062,7 +2062,7 @@
         "type": "github"
       }
     },
-    "silentSDDM": {
+    "silent-sddm": {
       "inputs": {
         "nixpkgs": "nixpkgs_12",
         "shizuruPkgs": "shizuruPkgs_2"
@@ -2295,37 +2295,37 @@
     "xdph_2": {
       "inputs": {
         "hyprland-protocols": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprland-protocols"
         ],
         "hyprlang": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "silentSDDM",
+          "silent-sddm",
           "shizuruPkgs",
           "hyprland",
           "systems"

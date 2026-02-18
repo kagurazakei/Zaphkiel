@@ -20,7 +20,7 @@
     chaotic.url = "github:lonerOrz/nyx-loner";
     impermanence.url = "github:nix-community/impermanence";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    silentSDDM.url = "github:kagurazakei/SilentSDDM";
+    silent-sddm.url = "github:kagurazakei/SilentSDDM";
     niri.url = "github:kagurazakei/niri";
     nur = {
       url = "github:nix-community/NUR";

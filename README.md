@@ -1,57 +1,53 @@
 # My NixOS Configuration ( Stolen From Zaphkiel )
-# Heavily Unstable and Under heavy Development state 
+
+# Heavily Unstable and Under heavy Development state
 
 <div align="center">
   <img src="./.github/screenshots/niri-1.png" width="30%" alt="Niri Overview"/>
   <img src="./.github/screenshots/niri-2.png" width="30%" alt="Niri Rice"/>
+  <img src="./.github/screenshots/silent-sddm.png" width="30%" alt="Niri Rice"/>
 </div>
 
-
-- Wallpaper: [The Herta by meirong][wallpaper]
 - [Installation Guide][install guide]
 
 ## Summary
 
-| Component | Software | Configuration |
-| --------- | -------- | ------------- |
-|noctalia|[Quickshell]|[`dots/noctalia/`][noctaliadots]|
-|Compositor|[Niri]|[`dots/niri`][niridots]|
-|Launcher|[Fuzzel]|[`dots/fuzzel`][fuzldots]|
-|Colors|[Matugen]|[`nixosModules/external/matugen/templates/`][mtgndots]|
-|Terminal|[foot]|[`dots/foot/foot.ini`][footdots]|
-|Editor|[kitty]|[`dots/kitty/`][kittydots]|
-|Wallpapers|[booru-hs]|[`dots/booru/preview.md`][booru images]|
-|Cursor|[Kokomi Cursor][kokcursor]| nil / really long random text to make this table very wide yes looks like I|
+| Component  | Software                   | Configuration                                                               |
+| ---------- | -------------------------- | --------------------------------------------------------------------------- |
+| noctalia   | [Quickshell]               | [`dots/noctalia/`][noctaliadots]                                            |
+| Compositor | [Niri]                     | [`dots/niri`][niridots]                                                     |
+| Launcher   | [Fuzzel]                   | [`dots/fuzzel`][fuzldots]                                                   |
+| Colors     | [Matugen]                  | [`nixosModules/external/matugen/templates/`][mtgndots]                      |
+| Terminal   | [foot]                     | [`dots/foot/foot.ini`][footdots]                                            |
+| Editor     | [kitty]                    | [`dots/kitty/`][kittydots]                                                  |
+| Wallpapers | [booru-hs]                 | [`dots/booru/preview.md`][booru images]                                     |
+| Cursor     | [Kokomi Cursor][kokcursor] | nil / really long random text to make this table very wide yes looks like I |
 
 - [hjem] + [hjem-impure] over home manager
-- last revision where Zaphkiel was a normal flake
-  [1164182e][pre-dandelion-rev]
-- last revision where Zaphkiel was an npins based config
-  [fc91df912][npins-rev]
+- last revision where Zaphkiel was a normal flake [1164182e][pre-dandelion-rev]
+- last revision where Zaphkiel was an npins based config [fc91df912][npins-rev]
 - ~~Last revision where Zaphkiel was flake based~~ pre-npins flake config
   [0eee46d1e][flake-rev]
+- ~~fix sddm weird eval input errors check [`modules/nixosConfiguration.nix`][hostConfig]~~ pre-npins flake config
 
 ## What in the nix is going on here?
 
-The flake impliments the [dandruff pattern], without flake-parts.
-Should you try it? If you like your sanity, please don't.
-The functions that set this up are plagued with foot guns,
-which will be unpleasant to most people.
+The flake impliments the [dandruff pattern], without flake-parts. Should you try
+it? If you like your sanity, please don't. The functions that set this up are
+plagued with foot guns, which will be unpleasant to most people.
 
 ## Acknowledgement
 
-Firstly, I have to thank [sioodmy]
-for being the inspiration to ditch home manager and writing wrappers myself.
-I had known of wrappers before, but if it weren't for him,
-I wouldn't have heard of `pkgs.symlinkJoin` :D
+Firstly, I have to thank [sioodmy] for being the inspiration to ditch home
+manager and writing wrappers myself. I had known of wrappers before, but if it
+weren't for him, I wouldn't have heard of `pkgs.symlinkJoin` :D
 
-I also extend my gratitude to [NotAShelf]
-for developing the hjem nixos module. And also for his welcome criticism
-on some of the dumb nix code I've written.
+I also extend my gratitude to [NotAShelf] for developing the hjem nixos module.
+And also for his welcome criticism on some of the dumb nix code I've written.
 
-After two months of being on a normal, sane, nixos configuration,
-I have switched to the dandelion pattern (no I won't be spelling it correctly)
-largely due to [argosnothing] shilling [jet]'s nixos configuration a great deal.
+After two months of being on a normal, sane, nixos configuration, I have
+switched to the dandelion pattern (no I won't be spelling it correctly) largely
+due to [argosnothing] shilling [jet]'s nixos configuration a great deal.
 
 ### Quickshell
 
@@ -65,8 +61,8 @@ largely due to [argosnothing] shilling [jet]'s nixos configuration a great deal.
 
 ## Licensing
 
-All code in this repository is under the MIT license
-except wherever an explicit licensing is included.
+All code in this repository is under the MIT license except wherever an explicit
+licensing is included.
 
 [argosnothing]: https://github.com/argosnothing
 [booru images]: dots/booru/preview.md

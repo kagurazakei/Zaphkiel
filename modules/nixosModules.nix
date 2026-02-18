@@ -12,7 +12,6 @@
           inputs.nur.overlays.default
         ];
       };
-
     default = self.nixosModules.kurukuruDM;
   };
 }

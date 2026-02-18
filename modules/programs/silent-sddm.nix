@@ -1,33 +1,20 @@
-{ silentSDDM, ... }:
+{ self, ... }@inputs:
 {
+  # NOTE
+  # ╭──────────────────────────────────────────────────────────╮
+  # │ complete this weird inputs error ( check                 │
+  # │ nixosConfiguration )                                     │
+  # ╰──────────────────────────────────────────────────────────╯
+  # not really using this which is why the weird @inputs
+  # to excape eval errors using laziness
+
   azalea.modules.silent-sddm =
+    { pkgs, ... }:
     {
-      pkgs,
-      ...
-    }:
-    let
-      sddm-silent = silentSDDM.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    in
-    {
-      services.displayManager.sddm = {
+      imports = [ inputs.silent-sddm.nixosModules.default ];
+      programs.silentSDDM = {
         enable = true;
-        package = pkgs.kdePackages.sddm;
-        wayland.enable = true;
-        extraPackages = [
-          silentSDDM.packages.${pkgs.stdenv.hostPlatform.system}.default
-          pkgs.bibata-cursors
-          pkgs.kdePackages.qtbase
-        ];
-        theme = "silent";
-        settings = {
-          General = {
-            GreeterEnvironment = "QML2_IMPORT_PATH=${sddm-silent}/share/sddm/themes/silent/components/,QT_IM_MODULE=qtvirtualkeyboard";
-            InputMethod = "qtvirtualkeyboard";
-          };
-          Theme = {
-            CursorTheme = "Bibata-Modern-Ice";
-          };
-        };
+        theme = "rei";
       };
     };
 }
