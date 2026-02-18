@@ -1,14 +1,19 @@
 # ╭──────────────────────────────────────────────────────────╮
 # │ add inputs for using silent-sddm                                                           │
 # ╰──────────────────────────────────────────────────────────╯
-
-{ self, nixpkgs, ... }@inputs:
-
-let
-  inherit (nixpkgs.lib) genAttrs nixosSystem attrNames;
+{
+  self,
+  nixpkgs,
+  ...
+} @ inputs: let
+  inherit
+    (nixpkgs.lib)
+    genAttrs
+    nixosSystem
+    attrNames
+    ;
   sources = import ../npins;
-  mkHost =
-    hostName:
+  mkHost = hostName:
     nixosSystem {
       specialArgs = {
         inherit
@@ -26,8 +31,6 @@ let
     };
 
   hosts = attrNames self.azalea.hosts;
-
-in
-{
+in {
   nixosConfigurations = genAttrs hosts mkHost;
 }

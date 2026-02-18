@@ -3,12 +3,10 @@
 
   # This is the completely stolen from Rexcrazy804/Zaphkiel(dandelion)
   # Presenting, the *azalea* setup
-  outputs =
-    { ... }@inputs:
-    let
-      azalea = import ./azalea.nix inputs;
-      inherit (azalea) importModules recursiveImport;
-    in
+  outputs = {...} @ inputs: let
+    azalea = import ./azalea.nix inputs;
+    inherit (azalea) importModules recursiveImport;
+  in
     importModules [
       (recursiveImport ./modules)
     ];
@@ -63,13 +61,6 @@
       url = "github:notashelf/stash";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.crane.follows = "crane";
-    };
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.darwin.follows = "";
-      inputs.home-manager.follows = "";
-      inputs.systems.follows = "systems";
     };
     hs-todo = {
       url = "github:Rexcrazy804/haskell-todo";
