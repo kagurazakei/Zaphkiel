@@ -188,6 +188,19 @@
       "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/cc6d5cf12ae824e6945cc2599a2650d5fe054ffe.tar.gz",
       "hash": "sha256-u1yJ9JCLlQzmMNQSLZ/zWJTMLDcMDfLYpY/7cPtQuWU=",
       "frozen": true
+    },
+    "zen-browser-flake": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "0fa995bec0e391b45b032fbd9d6e03609a30c115",
+      "url": "https://github.com/0xc000022070/zen-browser-flake/archive/0fa995bec0e391b45b032fbd9d6e03609a30c115.tar.gz",
+      "hash": "sha256-6uEDuQYEGuyuFnvOdSx+fW75tRbNiLswAl6+4qyTdJ4="
     }
   },
   "version": 7

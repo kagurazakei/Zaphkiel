@@ -15,6 +15,7 @@
       self.azalea.modules.flatpak
       self.azalea.modules.scheduler
       self.azalea.modules.input
+      self.azalea.modules.nh
       # programs
       self.azalea.modules.environment
       self.azalea.modules.nix

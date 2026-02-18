@@ -6,7 +6,16 @@
 let
   inherit (nixpkgs.lib) genAttrs nixosSystem attrNames;
 
-  mkHost = hostName: nixosSystem { modules = [ self.azalea.hosts.${hostName} ]; };
+  mkHost =
+    hostName:
+    nixosSystem {
+      specialArgs = {
+        inherit self nixpkgs;
+        users = [ "antonio" ];
+        username = "antonio";
+      };
+      modules = [ self.azalea.hosts.${hostName} ];
+    };
   hosts = attrNames self.azalea.hosts;
 in
 {

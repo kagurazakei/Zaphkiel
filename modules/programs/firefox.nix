@@ -1,8 +1,11 @@
+{ firefox, ... }:
 {
-  azalea.modules.firefox = {pkgs, ...}: {
-    programs.firefox = {
-      package = pkgs.librewolf;
-      enable = true;
+  azalea.modules.firefox =
+    { pkgs, ... }:
+    {
+      programs.firefox = {
+        package = firefox.packages.${pkgs.stdenv.hostPlatform.system}.firefox-nightly-bin;
+        enable = true;
+      };
     };
-  };
 }

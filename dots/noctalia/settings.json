@@ -176,21 +176,6 @@
                     "textColor": "none"
                 },
                 {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "iconScale": 0.54,
-                    "id": "Taskbar",
-                    "maxTaskbarWidth": 40,
-                    "onlyActiveWorkspaces": true,
-                    "onlySameOutput": true,
-                    "showPinnedApps": false,
-                    "showTitle": false,
-                    "smartWidth": true,
-                    "titleWidth": 120
-                }
-            ],
-            "right": [
-                {
                     "clockColor": "none",
                     "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dds",
@@ -198,6 +183,18 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
+                }
+            ],
+            "right": [
+                {
+                    "colorizeIcons": false,
+                    "hideMode": "visible",
+                    "id": "ActiveWindow",
+                    "maxWidth": 100,
+                    "scrollingMode": "hover",
+                    "showIcon": true,
+                    "textColor": "secondary",
+                    "useFixedWidth": true
                 },
                 {
                     "blacklist": [
@@ -389,7 +386,8 @@
         "floatingRatio": 1.93,
         "inactiveIndicators": true,
         "monitors": [
-            "eDP-1"
+            "eDP-1",
+            "HDMI-A-1"
         ],
         "onlySameOutput": true,
         "pinnedApps": [
@@ -442,8 +440,8 @@
         "lockScreenMonitors": [
         ],
         "lockScreenTint": 0,
-        "radiusRatio": 0.98,
-        "scaleRatio": 1.1,
+        "radiusRatio": 1.27,
+        "scaleRatio": 1.05,
         "screenRadiusRatio": 0.86,
         "shadowDirection": "center",
         "shadowOffsetX": 0,

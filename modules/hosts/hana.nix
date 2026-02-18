@@ -24,6 +24,9 @@
         # self.azalea.modules.intel
         self.azalea.modules.nvidia
         self.azalea.modules.greetd-autostart
+        # self.azalea.modules.silent-sddm
+        self.azalea.modules.cups
+        self.azalea.modules.openssh
       ];
 
       # info

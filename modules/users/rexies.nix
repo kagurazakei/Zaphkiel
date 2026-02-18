@@ -49,6 +49,9 @@ in
           "networkmanager"
           "wheel"
           "multimedia"
+          "video"
+          "inputs"
+          "audio"
         ];
         hashedPasswordFile = config.age.secrets.antonioPass.path;
 
@@ -69,6 +72,17 @@ in
         ];
       };
 
+      hj.files = {
+        ".face.icon".source = "${../../dots/profile.png}";
+      };
+      systemd.tmpfiles.rules = [
+        # AccountsService user file
+        "f+ /var/lib/AccountsService/users/${username} 0600 root root - \
+[User]\nIcon=/var/lib/AccountsService/icons/${username}\n"
+
+        # Symlink icon
+        "L+ /var/lib/AccountsService/icons/${username} - - - - ${config.hj.files.".face.icon".source}"
+      ];
       hjem.users.${username} = {
         enable = true;
         user = username;
@@ -118,6 +132,7 @@ in
 
   azalea.dots.rexies-gui = mkDotsModule username {
     "uwsm/env" = "/uwsm/env";
+    "dolphinrc" = "/dolphinrc";
     "qt6ct/qt6ct.conf" = "/qt6ct/qt6ct.conf";
     "background" = { config, ... }: config.zaphkiel.data.wallpaper;
     "matugen/config.toml" = "/matugen/config.toml";
@@ -155,8 +170,5 @@ in
     "niri/config.kdl" = "/niri/config.kdl";
     "noctalia/colors.json" = "/noctalia/colors.json";
     "noctalia/settings.json" = "/noctalia/settings.json";
-  };
-  hj.files = {
-    ".face.icon".sources = "${../../dots/profile.png}";
   };
 }
