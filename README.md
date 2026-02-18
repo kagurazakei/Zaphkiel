@@ -15,11 +15,12 @@
 | Component  | Software                   | Configuration                                                               |
 | ---------- | -------------------------- | --------------------------------------------------------------------------- |
 | noctalia   | [Quickshell]               | [`dots/noctalia`][noctaliadots]                                             |
-| Compositor | [Niri]                     | [`dots/niri`][niridots]                                                     |
+| Compositor | [Niri]                     | [`dots/niri/config.kdl`][niridots]                                          |
+| Compositor | [Niri-Fork]                | [`dots/niri/config.kdl`][niridots]                                          |
 | Launcher   | [Fuzzel]                   | [`dots/fuzzel`][fuzldots]                                                   |
 | Colors     | [Matugen]                  | [`nixosModules/external/matugen/templates/`][mtgndots]                      |
 | Terminal   | [foot]                     | [`dots/foot/foot.ini`][footdots]                                            |
-| Editor     | [kitty]                    | [`dots/kitty`][kittydots]                                                   |
+| Editor     | [Kitty]                    | [`dots/kitty/kitty.conf`][kittydots]                                        |
 | Wallpapers | [booru-hs]                 | [`dots/booru/preview.md`][booru images]                                     |
 | Cursor     | [Kokomi Cursor][kokcursor] | nil / really long random text to make this table very wide yes looks like I |
 
@@ -73,6 +74,11 @@ licensing is included.
 [flake-rev]: https://github.com/Rexcrazy804/Zaphkiel/tree/0eee46d1e5d98c3b94d39795b73a39270fc61ad7
 [foot]: https://codeberg.org/dnkl/foot
 [footdots]: dots/foot/foot.ini
+[Kitty]: https://github.com/kovidgoyal/kitty.git
+[kittydots]: dots/kitty/kitty.conf
+[Niri]: https://github.com/niri-wm/niri.git
+[Niri-Fork]: https://github.com/yayuuu/niri.git ( Fork Fork blur and modifier only keybinding )
+[niridots]: dots/niri/config.kdl
 [fuzldots]: dots/fuzzel
 [fuzzel]: https://codeberg.org/dnkl/fuzzel
 [hjem]: https://github.com/feel-co/hjem
