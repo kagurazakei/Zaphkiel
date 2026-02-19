@@ -94,6 +94,19 @@
       "url": "https://github.com/3rd/image.nvim/archive/446a8a5cc7a3eae3185ee0c697732c32a5547a0b.tar.gz",
       "hash": "sha256-EaDeY8aP41xHTw5epqYjaBqPYs6Z2DABzSaVOnG6D6I="
     },
+    "impermanence": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "impermanence"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "7b1d382faf603b6d264f58627330f9faa5cba149",
+      "url": "https://github.com/nix-community/impermanence/archive/7b1d382faf603b6d264f58627330f9faa5cba149.tar.gz",
+      "hash": "sha256-03+JxvzmfwRu+5JafM0DLbxgHttOQZkUtDWBmeUkN8Y="
+    },
     "khanelivim": {
       "type": "Git",
       "repository": {
@@ -161,6 +174,19 @@
       "revision": "4da2159b3f3420d43613f43e159f4253b8544474",
       "url": "https://github.com/nvim-neorg/neorg/archive/4da2159b3f3420d43613f43e159f4253b8544474.tar.gz",
       "hash": "sha256-DFpbdBfyW32d4QhH59+melM7cHK9tzm9awKjTDPJOvs="
+    },
+    "nix-flatpak": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "gmodena",
+        "repo": "nix-flatpak"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "123fe29340a5b8671367055b75a6e7c320d6f89a",
+      "url": "https://github.com/gmodena/nix-flatpak/archive/123fe29340a5b8671367055b75a6e7c320d6f89a.tar.gz",
+      "hash": "sha256-Sbh037scxKFm7xL0ahgSCw+X2/5ZKeOwI2clqrYr9j4="
     },
     "rosep-fish": {
       "type": "Git",

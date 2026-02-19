@@ -1,7 +1,7 @@
-{nix-flatpak, ...}: {
-  azalea.modules.flatpak = {...}: {
+{...}: {
+  azalea.modules.flatpak = {sources, ...}: {
     imports = [
-      nix-flatpak.nixosModules.nix-flatpak
+      (sources.nix-flatpak + "/modules/nixos.nix")
     ];
     services = {
       flatpak = {

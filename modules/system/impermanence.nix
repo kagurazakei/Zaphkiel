@@ -1,9 +1,7 @@
-{ impermanence, ... }:
-{
-  azalea.modules.impermanence = {
-
+{...}: {
+  azalea.modules.impermanence = {sources, ...}: {
     imports = [
-      impermanence.nixosModules.impermanence
+      (sources.impermanence + "/nixos.nix")
     ];
     environment.persistence."/persistent" = {
       enable = true; # NB: Defaults to true, not needed

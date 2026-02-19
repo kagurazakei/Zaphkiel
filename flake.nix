@@ -16,8 +16,6 @@
     systems.url = "github:nix-systems/x86_64-linux";
     crane.url = "github:ipetkov/crane";
     chaotic.url = "github:lonerOrz/nyx-loner";
-    impermanence.url = "github:nix-community/impermanence";
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
     silent-sddm.url = "github:kagurazakei/SilentSDDM";
     zakeivim.url = "github:kagurazakei/khanelivim";
     niri.url = "github:kagurazakei/niri";
