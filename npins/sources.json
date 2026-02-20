@@ -116,9 +116,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "67cc29028c7377fa3ffca69471b678f11cb245a8",
-      "url": "https://github.com/kagurazakei/khanelivim/archive/67cc29028c7377fa3ffca69471b678f11cb245a8.tar.gz",
-      "hash": "sha256-LxPEJql4dXWe02p8sZLuPsEIBSxPMbSYHnWymooQ4Lw="
+      "revision": "ed0892ce3946b132955ec541e7cdd275443b62ba",
+      "url": "https://github.com/kagurazakei/khanelivim/archive/ed0892ce3946b132955ec541e7cdd275443b62ba.tar.gz",
+      "hash": "sha256-732/iyVGUZbB/oNA1xBU1hUKlzD+wzzXDnTZQyluFZk="
     },
     "mangowc": {
       "type": "GitRelease",

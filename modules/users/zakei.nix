@@ -4,7 +4,7 @@ let
   username = "antonio";
 in
 {
-  azalea.users.rexies =
+  azalea.users.zakei =
     {
       pkgs,
       config,
@@ -106,7 +106,7 @@ in
   # I have spawned horrors upon this world
   # nix beginners, I am sorry
 
-  azalea.dots.rexies-cli = mkDotsModule username {
+  azalea.dots.zakei-cli = mkDotsModule username {
     # terminal
     # NOTE: required bat cache --build before theme can be used
     "bat/config" = "/bat/config";
@@ -130,7 +130,7 @@ in
     "nushell/git-status.nu" = "/nushell/git-status.nu";
   };
 
-  azalea.dots.rexies-gui = mkDotsModule username {
+  azalea.dots.zakei-gui = mkDotsModule username {
     "uwsm/env" = "/uwsm/env";
     "dolphinrc" = "/dolphinrc";
     "qt6ct/qt6ct.conf" = "/qt6ct/qt6ct.conf";
@@ -157,16 +157,16 @@ in
     "fcitx5/conf/classicui.conf" = "/fcitx5/classicui.conf";
   };
 
-  azalea.dots.rexies-mango = mkDotsModule username {
+  azalea.dots.zakei-mango = mkDotsModule username {
     "mango/config.conf" = "/mango/config.conf";
     "mango/autostart.sh" = "/mango/autostart.sh";
     "mango/hardware.conf" = d: d.dotsDir + "/mango/${d.lib.toLower d.config.networking.hostName}.conf";
   };
 
-  azalea.dots.rexies-hyprland = mkDotsModule username {
+  azalea.dots.zakei-hyprland = mkDotsModule username {
     "hypr/hyprland.conf" = "/hyprland/hyprland.conf";
   };
-  azalea.dots.rexies-niri = mkDotsModule username {
+  azalea.dots.zakei-niri = mkDotsModule username {
     "niri/config.kdl" = "/niri/config.kdl";
     "noctalia/colors.json" = "/noctalia/colors.json";
     "noctalia/settings.json" = "/noctalia/settings.json";
