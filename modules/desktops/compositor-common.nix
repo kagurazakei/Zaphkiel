@@ -51,6 +51,7 @@
         mpv-wrapped
         viu
         equibop
+        niri-scratchpad-rs
         ;
       inherit
         (zpkgs.scripts)
@@ -74,6 +75,7 @@
         brightnessctl
         duf
         lazygit
+        gpu-screen-recorder
         ;
       inherit (pkgs) trashy fuzzel wl-screenrec;
       inherit

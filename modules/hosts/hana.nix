@@ -68,6 +68,7 @@
     users.users."antonio".packages = [
       pkgs.vscodium
       self.packages.${pkgs.stdenv.hostPlatform.system}.mpv-wrapped
+      pkgs.cava
     ];
 
     # hardware

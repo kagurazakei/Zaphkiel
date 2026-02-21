@@ -454,7 +454,7 @@
     },
     "hooks": {
         "darkModeChange": "",
-        "enabled": false,
+        "enabled": true,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
@@ -634,10 +634,6 @@
             {
                 "enabled": true,
                 "id": "kcolorscheme"
-            },
-            {
-                "enabled": true,
-                "id": "fuzzel"
             },
             {
                 "enabled": true,

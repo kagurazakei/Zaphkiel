@@ -175,6 +175,35 @@
       "url": "https://github.com/nvim-neorg/neorg/archive/4da2159b3f3420d43613f43e159f4253b8544474.tar.gz",
       "hash": "sha256-DFpbdBfyW32d4QhH59+melM7cHK9tzm9awKjTDPJOvs="
     },
+    "niri-scratchpad-rs": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "argosnothing",
+        "repo": "niri-scratchpad-rs"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "8fa1645c826bd1d0990e4a2c8e445ff9bc90fd42",
+      "url": "https://github.com/argosnothing/niri-scratchpad-rs/archive/8fa1645c826bd1d0990e4a2c8e445ff9bc90fd42.tar.gz",
+      "hash": "sha256-Z+aFZShe5m0FMf6e1DotsGuvs6uH3hQ1VPvsKHOk2SI="
+    },
+    "nirinit": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "amaanq",
+        "repo": "nirinit"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.2.1",
+      "revision": "57fa05318b6371c887a857cc7697271758a8091f",
+      "url": "https://api.github.com/repos/amaanq/nirinit/tarball/refs/tags/v0.2.1",
+      "hash": "sha256-jqeBpFTG++Aupy5VDmtEBO0NchXQZBsVLWOchWE7qWU="
+    },
     "nix-flatpak": {
       "type": "Git",
       "repository": {
@@ -213,6 +242,19 @@
       "revision": "725e9c38880d577ee973eb916e83395964ffc287",
       "url": "https://github.com/rose-pine/foot/archive/725e9c38880d577ee973eb916e83395964ffc287.tar.gz",
       "hash": "sha256-Lo8HkJr+uYNUSRNzUhaksJAPvK8fbu5WubtmBSsa0/Q="
+    },
+    "rust-overlay": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "oxalica",
+        "repo": "rust-overlay"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "8b3f46b8a6d17ab46e533a5e3d5b1cc2ff228860",
+      "url": "https://github.com/oxalica/rust-overlay/archive/8b3f46b8a6d17ab46e533a5e3d5b1cc2ff228860.tar.gz",
+      "hash": "sha256-zKprqMQDl3xVfhSSYvgru1IGXjFdxryWk+KqK0I20Xk="
     },
     "shizuruPkgs": {
       "type": "Git",
